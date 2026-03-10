@@ -18,7 +18,7 @@ const textFont = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Platz | The Everyday Place to Pause",
+  title: "Platz | Tvoje svakodnevno mesto za predah",
   description: "Mesto gde se može pronaći najbolja kafa u Subotici. Od jutarnjeg espressa do večernjeg pića sa prijateljima, Platz je tvoje svakodnevno mesto za predah, druženje i punjenje baterija.",
 };
 

@@ -34,7 +34,7 @@ const Header = () => {
                     </div>
                     <div className="hidden sm:block">
                         <h1 className="font-display font-semibold text-xl tracking-wide uppercase text-brown-dark m-0 leading-none">Platz</h1>
-                        <p className="text-sm text-brown opacity-70 mt-1 tracking-widest uppercase text-[10px] font-semibold">Coffee Society</p>
+                        <p className="text-sm text-brown opacity-70 mt-1 tracking-widest uppercase text-[10px] font-semibold">Zajednica ljubitelja kafe</p>
                     </div>
                 </a>
 

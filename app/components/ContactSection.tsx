@@ -84,10 +84,10 @@ export function ContactSection() {
               <div>
                 <h4 className="font-bold uppercase tracking-widest text-xs text-beige/50 mb-3">Društvene mreže</h4>
                 <div className="flex gap-4">
-                  <a href="#" className="w-10 h-10 rounded-full border border-beige/20 flex items-center justify-center hover:bg-yellow hover:border-yellow hover:text-brown-dark transition-all duration-300">
+                  <a href="https://www.instagram.com/caffeplatz/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-beige/20 flex items-center justify-center hover:bg-yellow hover:border-yellow hover:text-brown-dark transition-all duration-300">
                     <Instagram size={20} />
                   </a>
-                  <a href="#" className="w-10 h-10 rounded-full border border-beige/20 flex items-center justify-center hover:bg-yellow hover:border-yellow hover:text-brown-dark transition-all duration-300">
+                  <a href="https://www.facebook.com/people/Platz-Caffe/61577870382643/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-beige/20 flex items-center justify-center hover:bg-yellow hover:border-yellow hover:text-brown-dark transition-all duration-300">
                     <Facebook size={20} />
                   </a>
                 </div>
