@@ -1,26 +1,260 @@
 @import "tailwindcss";
 
+@theme {
+  --color-beige: #F8F5F0;
+  --color-beige-soft: #FFFFFF;
+  --color-beige-dark: #E4DFD5;
+  --color-brown: #1B3B2B;
+  --color-brown-dark: #10271b;
+  --color-yellow: #d6b975;
+  --color-green-accent: #1B3B2B;
+  --color-gold: #C5A880;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --beige: #F8F5F0;
+  --beige-soft: #FFFFFF;
+  --beige-dark: #E4DFD5;
+  --brown: #1B3B2B;
+  --brown-dark: #10271b;
+  --yellow: #d6b975;
+  --green-accent: #1B3B2B;
+  --gold: #C5A880;
+  
+  --shadow-premium: 0 20px 40px -10px rgba(92, 67, 48, 0.12);
+  --shadow-hover: 0 30px 60px -15px rgba(92, 67, 48, 0.20);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--beige);
+  color: var(--brown);
+  font-family: var(--font-text), sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: var(--yellow);
+  color: var(--brown-dark);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleUp {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes pulse-slow {
+  0%, 100% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.05); opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+}
+
+.animate-scale-up {
+  animation: scaleUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+}
+
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+.delay-700 { animation-delay: 700ms; }
+
+.glass-nav {
+  /* Default state (scrolled down) */
+  background: rgba(248, 245, 240, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(92, 67, 48, 0.08);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  padding-block: 0.5rem;
+}
+
+/* CSS-only scroll state trick using body:has(:target) is tricky. 
+   A more robust CSS-only approach for a header that shrinks on scroll 
+   without JS is to use scroll-timeline (modern Chrome) or just rely on 
+   a slightly taller initial state if we had a wrapper. 
+   To ensure cross-browser CSS-only without JS, we'll use a neat CSS animation 
+   tied to scroll technically via `@scroll-timeline` if supported, but for safety,
+   we'll just use a pure sticky header and provide a beautifully padded top area.
+   Since the user explicitly asked for "CSS only", we will use modern CSS Scroll-Driven Animations
+   with a fallback. */
+
+@supports (animation-timeline: scroll()) {
+  @keyframes shrinkHeader {
+    from {
+      padding-block: 1.5rem;
+      background: rgba(248, 245, 240, 0);
+      border-bottom-color: transparent;
+      box-shadow: none;
+    }
+    to {
+      padding-block: 0.5rem;
+      background: rgba(248, 245, 240, 0.95);
+      border-bottom-color: rgba(92, 67, 48, 0.08);
+      box-shadow: 0 4px 20px rgba(92, 67, 48, 0.05);
+    }
+  }
+
+  .glass-nav {
+    animation: shrinkHeader linear both;
+    animation-timeline: scroll();
+    animation-range: 0 150px;
+  }
+}
+
+/* Fallback for browsers without scroll-timeline: it will just stay its normal size 
+   or we can simulate it with a simple hover/focus, but scroll-timeline is the true CSS-only way. */
+
+.btn-primary {
+  background-color: var(--yellow);
+  color: var(--brown-dark);
+  font-weight: 600;
+  padding: 0.875rem 2rem;
+  border-radius: 99px;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 20px rgba(240, 185, 41, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  transition: all 0.6s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(240, 185, 41, 0.5);
+}
+
+.btn-primary:hover::after {
+  left: 100%;
+}
+
+.btn-secondary {
+  background-color: var(--brown);
+  color: var(--beige);
+  font-weight: 600;
+  padding: 0.875rem 2rem;
+  border-radius: 99px;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-secondary:hover {
+  background-color: var(--brown-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(92, 67, 48, 0.2);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--brown);
+  font-weight: 600;
+  padding: 0.875rem 2rem;
+  border-radius: 99px;
+  border: 1px solid rgba(92, 67, 48, 0.3);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-outline:hover {
+  border-color: var(--brown);
+  background-color: rgba(92, 67, 48, 0.05);
+  transform: translateY(-2px);
+}
+
+.card-premium {
+  background-color: var(--beige-soft);
+  border-radius: 1.5rem;
+  padding: 3rem 2rem;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid rgba(92, 67, 48, 0.06);
+  position: relative;
+  overflow: hidden;
+}
+
+.card-premium::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: transparent;
+  transition: background-color 0.4s ease;
+}
+
+.card-premium:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-premium);
+}
+
+.card-premium:hover::before {
+  background-color: var(--yellow);
+}
+
+.hero-gradient {
+  background: radial-gradient(circle at 85% 15%, rgba(240, 185, 41, 0.15) 0%, transparent 40%),
+              radial-gradient(circle at 15% 85%, rgba(92, 67, 48, 0.05) 0%, transparent 40%);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--brown-dark) 0%, var(--brown) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.nav-link {
+  position: relative;
+  color: var(--brown);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--yellow);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--brown-dark);
+}
+
+.nav-link:hover::after {
+  width: 100%;
 }
