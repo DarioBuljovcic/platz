@@ -1,10 +1,20 @@
 'use client'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, MapPin, Phone, Instagram, Facebook } from 'lucide-react'
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
+    const [isAtTop, setIsAtTop] = useState(true)
+
+    // Scroll listener to detect if user is at the top
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsAtTop(window.scrollY < 40)
+        }
+        window.addEventListener('scroll', handleScroll)
+        return () => window.removeEventListener('scroll', handleScroll)
+    }, [])
 
     // Lock body scroll when menu is open
     useEffect(() => {
@@ -19,65 +29,90 @@ const Header = () => {
     }, [isMenuOpen])
 
     const navLinks = [
-        { name: 'Naša priča', href: '#story' },
-        { name: 'Meni', href: '#menu' },
-        { name: 'Kontakt', href: '#contact' },
+        { name: 'Naša priča', href: '/#story' },
+        { name: 'Meni', href: '/#menu' },
+        { name: 'Kontakt', href: '/#contact' },
     ]
 
     return (
-        <header className="sticky top-0 mt-2 w-full z-50 glass-nav transition-all duration-300">
-            <div className="max-w-7xl mx-auto px-6 md:px-12 h-24 flex items-center justify-between">
-                {/* Brand */}
-                <a href="#story" className="flex items-center gap-4 group">
-                    <div className="w-12 h-12 bg-brown text-beige rounded-xl overflow-hidden flex items-center justify-center font-display font-bold text-2xl shadow-md group-hover:bg-brown-dark group-hover:shadow-lg transition-all duration-300 transform group-hover:-translate-y-1">
-                        <Image src="/Logo.webp" alt="Logo" width={50} height={50} />
+        <header className={`glass-nav fixed top-0 left-0 w-full z-50 transition-all duration-500 ${isAtTop ? 'pt-4' : 'pt-0'}`}>
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                {/* Top Info Bar - Visible only when at top */}
+                <div className={`overflow-hidden transition-all duration-500 ease-in-out hidden md:block ${isAtTop ? 'max-h-12 opacity-100 mb-4' : 'max-h-0 opacity-0 mb-0'}`}>
+                    <div className="flex justify-between items-center py-2 px-6 bg-white/5 backdrop-blur-md rounded-full border border-white/10 text-[11px] uppercase tracking-[0.15em] font-medium text-white/60">
+                        <div className="flex items-center gap-8">
+                            <div className="flex items-center gap-2">
+                                <MapPin size={12} className="text-gold" />
+                                <span>Trg Cara Jovana Nenada 9, Subotica</span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                                <Phone size={12} className="text-gold" />
+                                <a href="tel:+381601234567" className="hover:text-gold transition-colors">+381 60 123 4567</a>
+                            </div>
+                        </div>
+                        <div className="flex items-center gap-4 border-l border-white/10 pl-6">
+                            <a href="https://instagram.com/caffeplatz" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">
+                                <Instagram size={14} />
+                            </a>
+                            <a href="https://facebook.com/caffeplatz" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">
+                                <Facebook size={14} />
+                            </a>
+                        </div>
                     </div>
-                    <div className="hidden sm:block">
-                        <h1 className="font-display font-semibold text-xl tracking-wide uppercase text-brown-dark m-0 leading-none">Platz</h1>
-                        <p className="text-sm text-brown opacity-70 mt-1 tracking-widest uppercase text-[10px] font-semibold">Zajednica ljubitelja kafe</p>
-                    </div>
-                </a>
+                </div>
 
-                {/* Desktop Nav */}
-                <nav className="hidden md:flex items-center gap-10">
-                    {navLinks.map((link) => (
-                        <a key={link.name} href={link.href} className="nav-link text-sm tracking-wide uppercase font-semibold">
-                            {link.name}
-                        </a>
-                    ))}
-                </nav>
+                {/* Main Header */}
+                <div className={` h-20 md:h-24 px-6 md:px-10 flex items-center justify-between transition-all duration-500 `}>
+                    {/* Brand */}
+                    <a href="/" className="flex items-center gap-4 group">
+                        <div className="w-10 h-10 md:w-12 md:h-12 bg-white/5 text-gold rounded-xl overflow-hidden flex items-center justify-center font-display font-bold text-2xl shadow-md group-hover:bg-white/10 group-hover:shadow-lg transition-all duration-300 transform group-hover:-translate-y-1 border border-white/10">
+                            <Image src="/Logo.webp" alt="Logo" width={50} height={50} />
+                        </div>
+                        <div className="hidden sm:block">
+                            <h1 className="font-display font-semibold text-lg md:text-xl tracking-wide uppercase text-white m-0 leading-none">Platz</h1>
+                            <p className="text-[9px] md:text-[10px] text-white/50 mt-1 tracking-widest uppercase font-semibold">Zajednica ljubitelja kafe</p>
+                        </div>
+                    </a>
 
-                {/* Mobile Nav Toggle */}
-                <button
-                    onClick={() => setIsMenuOpen(true)}
-                    className="md:hidden text-brown hover:text-green-accent transition-colors p-2"
-                    aria-label="Open Menu"
-                >
-                    <Menu size={28} />
-                </button>
+                    {/* Desktop Nav */}
+                    <nav className="hidden md:flex items-center gap-10">
+                        {navLinks.map((link) => (
+                            <a key={link.name} href={link.href} className="nav-link text-xs tracking-widest uppercase font-bold text-white/80 hover:text-gold transition-colors">
+                                {link.name}
+                            </a>
+                        ))}
+                    </nav>
+
+                    {/* Mobile Nav Toggle */}
+                    <button
+                        onClick={() => setIsMenuOpen(true)}
+                        className="md:hidden text-white hover:text-gold transition-colors p-2"
+                        aria-label="Open Menu"
+                    >
+                        <Menu size={24} />
+                    </button>
+                </div>
             </div>
 
             {/* Mobile Menu Overlay */}
             <div
-                className={`fixed inset-0 bg-beige/98 z-[60] flex flex-col items-center justify-center transition-all duration-500 ease-in-out md:hidden ${isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
-                    }`}
+                className={`fixed inset-0 bg-green-accent /98 z-[60] flex flex-col items-center justify-center transition-all duration-500 ease-in-out md:hidden ${isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
             >
                 <button
                     onClick={() => setIsMenuOpen(false)}
-                    className="absolute top-8 right-8 text-brown hover:text-green-accent transition-colors p-2"
+                    className="absolute top-8 right-8 text-white hover:text-gold transition-colors p-2"
                     aria-label="Close Menu"
                 >
                     <X size={32} />
                 </button>
 
-                <nav className="flex flex-col items-center gap-8">
+                <nav className="flex flex-col items-center gap-8 mb-12">
                     {navLinks.map((link, index) => (
                         <a
                             key={link.name}
                             href={link.href}
                             onClick={() => setIsMenuOpen(false)}
-                            className={`font-display text-4xl text-brown hover:text-green-accent transition-all duration-300 uppercase tracking-widest ${isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
-                                }`}
+                            className={`font-display text-4xl text-white hover:text-gold transition-all duration-300 uppercase tracking-widest ${isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
                             style={{ transitionDelay: `${index * 100}ms` }}
                         >
                             {link.name}
@@ -85,8 +120,26 @@ const Header = () => {
                     ))}
                 </nav>
 
-                <div className="absolute bottom-12 text-center">
-                    <p className="text-xs text-brown/40 uppercase tracking-[0.2em] font-medium">Platz © 2024</p>
+                <div className={`flex flex-col items-center gap-6 transition-all duration-500 delay-300 ${isMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+                    <div className="flex flex-col items-center gap-2 text-white/60 text-sm font-light">
+                        <div className="flex items-center gap-2">
+                            <MapPin size={14} className="text-gold" />
+                            <span>Trg Cara Jovana Nenada 9, Subotica</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                            <Phone size={14} className="text-gold" />
+                            <a href="tel:+381601234567">+381 60 123 4567</a>
+                        </div>
+                    </div>
+                    <div className="flex gap-6">
+                        <a href="https://instagram.com/caffeplatz" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white hover:text-gold hover:border-gold transition-all">
+                            <Instagram size={24} />
+                        </a>
+                        <a href="https://facebook.com/caffeplatz" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white hover:text-gold hover:border-gold transition-all">
+                            <Facebook size={24} />
+                        </a>
+                    </div>
+                    <p className="text-[10px] text-white/30 uppercase tracking-[0.3em] font-medium pt-8">Platz © 2024</p>
                 </div>
             </div>
         </header>

@@ -4,10 +4,10 @@
   --color-beige: #F8F5F0;
   --color-beige-soft: #FFFFFF;
   --color-beige-dark: #E4DFD5;
-  --color-brown: #1B3B2B;
-  --color-brown-dark: #10271b;
+  --color-brown: #F8F5F0; /* Changed from dark to light */
+  --color-brown-dark: #FFFFFF; /* Changed from dark to light */
   --color-yellow: #d6b975;
-  --color-green-accent: #1B3B2B;
+  --color-green-accent: #263D2F; /* New background color */
   --color-gold: #C5A880;
 }
 
@@ -15,18 +15,18 @@
   --beige: #F8F5F0;
   --beige-soft: #FFFFFF;
   --beige-dark: #E4DFD5;
-  --brown: #1B3B2B;
-  --brown-dark: #10271b;
+  --brown: #F8F5F0; /* Near white */
+  --brown-dark: #FFFFFF; /* White */
   --yellow: #d6b975;
-  --green-accent: #1B3B2B;
+  --green-accent: #263D2F; /* Dark green */
   --gold: #C5A880;
   
-  --shadow-premium: 0 20px 40px -10px rgba(92, 67, 48, 0.12);
-  --shadow-hover: 0 30px 60px -15px rgba(92, 67, 48, 0.20);
+  --shadow-premium: 0 20px 40px -10px rgba(0, 0, 0, 0.3);
+  --shadow-hover: 0 30px 60px -15px rgba(0, 0, 0, 0.4);
 }
 
 body {
-  background-color: var(--beige);
+  background-color: var(--green-accent);
   color: var(--brown);
   font-family: var(--font-text), sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -35,8 +35,8 @@ body {
 }
 
 ::selection {
-  background-color: var(--yellow);
-  color: var(--brown-dark);
+  background-color: var(--gold);
+  color: var(--green-accent);
 }
 
 @keyframes fadeIn {
@@ -73,37 +73,27 @@ body {
 
 .glass-nav {
   /* Default state (scrolled down) */
-  background: rgba(248, 245, 240, 0.95);
+  background: rgba(38, 61, 47, 0.95); /* Dark green background */
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(92, 67, 48, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   padding-block: 0.5rem;
 }
-
-/* CSS-only scroll state trick using body:has(:target) is tricky. 
-   A more robust CSS-only approach for a header that shrinks on scroll 
-   without JS is to use scroll-timeline (modern Chrome) or just rely on 
-   a slightly taller initial state if we had a wrapper. 
-   To ensure cross-browser CSS-only without JS, we'll use a neat CSS animation 
-   tied to scroll technically via `@scroll-timeline` if supported, but for safety,
-   we'll just use a pure sticky header and provide a beautifully padded top area.
-   Since the user explicitly asked for "CSS only", we will use modern CSS Scroll-Driven Animations
-   with a fallback. */
 
 @supports (animation-timeline: scroll()) {
   @keyframes shrinkHeader {
     from {
       padding-block: 1.5rem;
-      background: rgba(248, 245, 240, 0);
+      background: rgba(38, 61, 47, 0);
       border-bottom-color: transparent;
       box-shadow: none;
     }
     to {
       padding-block: 0.5rem;
-      background: rgba(248, 245, 240, 0.95);
-      border-bottom-color: rgba(92, 67, 48, 0.08);
-      box-shadow: 0 4px 20px rgba(92, 67, 48, 0.05);
+      background: rgba(38, 61, 47, 0.95);
+      border-bottom-color: rgba(255, 255, 255, 0.1);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     }
   }
 
@@ -118,8 +108,8 @@ body {
    or we can simulate it with a simple hover/focus, but scroll-timeline is the true CSS-only way. */
 
 .btn-primary {
-  background-color: var(--yellow);
-  color: var(--brown-dark);
+  background-color: var(--gold);
+  color: var(--green-accent);
   font-weight: 600;
   padding: 0.875rem 2rem;
   border-radius: 99px;
@@ -128,34 +118,19 @@ body {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  box-shadow: 0 4px 20px rgba(240, 185, 41, 0.4);
+  box-shadow: 0 4px 20px rgba(197, 168, 128, 0.4);
   position: relative;
   overflow: hidden;
 }
 
-.btn-primary::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
-  transition: all 0.6s ease;
-}
-
 .btn-primary:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(240, 185, 41, 0.5);
-}
-
-.btn-primary:hover::after {
-  left: 100%;
+  box-shadow: 0 8px 25px rgba(197, 168, 128, 0.5);
 }
 
 .btn-secondary {
   background-color: var(--brown);
-  color: var(--beige);
+  color: var(--green-accent);
   font-weight: 600;
   padding: 0.875rem 2rem;
   border-radius: 99px;
@@ -169,7 +144,7 @@ body {
 .btn-secondary:hover {
   background-color: var(--brown-dark);
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(92, 67, 48, 0.2);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .btn-outline {
@@ -178,7 +153,7 @@ body {
   font-weight: 600;
   padding: 0.875rem 2rem;
   border-radius: 99px;
-  border: 1px solid rgba(92, 67, 48, 0.3);
+  border: 1px solid rgba(248, 245, 240, 0.3);
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   display: inline-flex;
   align-items: center;
@@ -187,16 +162,16 @@ body {
 
 .btn-outline:hover {
   border-color: var(--brown);
-  background-color: rgba(92, 67, 48, 0.05);
+  background-color: rgba(248, 245, 240, 0.1);
   transform: translateY(-2px);
 }
 
 .card-premium {
-  background-color: var(--beige-soft);
+  background-color: rgba(255, 255, 255, 0.05);
   border-radius: 1.5rem;
   padding: 3rem 2rem;
   transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-  border: 1px solid rgba(92, 67, 48, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   position: relative;
   overflow: hidden;
 }
@@ -214,11 +189,12 @@ body {
 
 .card-premium:hover {
   transform: translateY(-10px);
-  box-shadow: var(--shadow-premium);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 255, 0.08);
 }
 
 .card-premium:hover::before {
-  background-color: var(--yellow);
+  background-color: var(--gold);
 }
 
 .hero-gradient {
