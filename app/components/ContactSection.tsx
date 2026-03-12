@@ -15,7 +15,7 @@ export function ContactSection() {
       <div className="max-w-7xl mx-auto relative z-10">
         <FadeIn>
           <div className="mb-24">
-            <h2 className="font-display text-6xl md:text-8xl mb-6 text-white font-bold">Platz Café</h2>
+            <h2 className="font-display text-6xl md:text-8xl mb-6 text-white font-bold">Platz Caffe</h2>
             <div className="w-16 h-1 bg-gold"></div>
           </div>
         </FadeIn>

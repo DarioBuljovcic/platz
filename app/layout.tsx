@@ -19,14 +19,14 @@ const textFont = Outfit({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://platz-blue.vercel.app"),
-  title: "Platz Café | Kafić u Subotici",
+  title: "Platz Caffe | Kafić u Subotici",
   description: "Platz je tvoje svakodnevno mesto za predah u srcu Subotice. Kvalitetna kafa, kokteli i prijatna atmosfera na Trgu republike.",
-  keywords: ["kafić Subotica", "kafa Subotica", "kokteli Subotica", "Platz café", "cafe Subotica", "coffee Subotica"],
+  keywords: ["kafić Subotica", "kafa Subotica", "kokteli Subotica", "Platz Caffe", "cafe Subotica", "coffee Subotica"],
   openGraph: {
-    title: "Platz Café | Kafić u Subotici",
+    title: "Platz Caffe | Kafić u Subotici",
     description: "Opuštena kafe kultura u Subotici.",
     url: "https://platz-blue.vercel.app",
-    siteName: "Platz Café",
+    siteName: "Platz Caffe",
     locale: "sr_RS",
     type: "website",
   },
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "CafeOrCoffeeShop",
-  "name": "Platz Café",
+  "name": "Platz Caffe",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Trg Cara Jovana Nenada 9",

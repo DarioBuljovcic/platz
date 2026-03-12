@@ -7,12 +7,12 @@ export default function PrivacyPolicy() {
         <FadeIn>
           <h1 className="font-display text-5xl md:text-7xl mb-12 text-brown">Politika privatnosti</h1>
           <div className="w-16 h-1 bg-yellow mb-12"></div>
-          
+
           <div className="prose prose-lg text-brown font-light space-y-8">
             <section>
               <h2 className="text-2xl font-bold mb-4 uppercase tracking-wider">1. Prikupljanje informacija</h2>
               <p>
-                Vaša privatnost nam je izuzetno važna. Platz Café se obavezuje da će štititi sve lične podatke koje nam poverite.
+                Vaša privatnost nam je izuzetno važna. Platz Caffe se obavezuje da će štititi sve lične podatke koje nam poverite.
                 Trenutno, naš veb-sajt služi prvenstveno u informativne svrhe i ne zahteva registraciju korisnika niti direktno prikuplja osetljive lične podatke.
               </p>
             </section>
@@ -27,7 +27,7 @@ export default function PrivacyPolicy() {
             <section>
               <h2 className="text-2xl font-bold mb-4 uppercase tracking-wider">3. Treće strane</h2>
               <p>
-                Naš sajt može sadržati linkove ka spoljnim stranicama (poput Instagrama ili Facebooka). Platz Café nije odgovoran za politiku privatnosti ili sadržaj tih eksternih sajtova.
+                Naš sajt može sadržati linkove ka spoljnim stranicama (poput Instagrama ili Facebooka). Platz Caffe nije odgovoran za politiku privatnosti ili sadržaj tih eksternih sajtova.
               </p>
             </section>
 

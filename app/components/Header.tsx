@@ -139,7 +139,7 @@ const Header = () => {
                             <Facebook size={24} />
                         </a>
                     </div>
-                    <p className="text-[10px] text-white/30 uppercase tracking-[0.3em] font-medium pt-8">Platz © 2024</p>
+                    <p className="text-[10px] text-white/30 uppercase tracking-[0.3em] font-medium pt-8">Platz © 2026</p>
                 </div>
             </div>
         </header>
