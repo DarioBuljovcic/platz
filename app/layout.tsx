@@ -18,8 +18,37 @@ const textFont = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Platz | Tvoje svakodnevno mesto za predah",
-  description: "Mesto gde se može pronaći najbolja kafa u Subotici. Od jutarnjeg espressa do večernjeg pića sa prijateljima, Platz je tvoje svakodnevno mesto za predah, druženje i punjenje baterija.",
+  metadataBase: new URL("https://platz-blue.vercel.app"),
+  title: "Platz Café | Kafić u Subotici",
+  description: "Platz je tvoje svakodnevno mesto za predah u srcu Subotice. Kvalitetna kafa, kokteli i prijatna atmosfera na Trgu republike.",
+  keywords: ["kafić Subotica", "kafa Subotica", "kokteli Subotica", "Platz café", "cafe Subotica", "coffee Subotica"],
+  openGraph: {
+    title: "Platz Café | Kafić u Subotici",
+    description: "Opuštena kafe kultura u Subotici.",
+    url: "https://platz-blue.vercel.app",
+    siteName: "Platz Café",
+    locale: "sr_RS",
+    type: "website",
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "Platz Café",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Trg Cara Jovana Nenada 9",
+    "addressLocality": "Subotica",
+    "postalCode": "24000",
+    "addressCountry": "RS"
+  },
+  "openingHours": "Mo-Su 07:00-23:00",
+  "url": "https://platz-blue.vercel.app",
+  "telephone": "+381 63 8024696",
+  // "image": "https://platz-blue.vercel.app/og-image.jpg",
+  "servesCuisine": "Coffee, Cocktails",
+  "priceRange": "$$"
 };
 
 export default function RootLayout({
@@ -28,7 +57,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="rs" className="scroll-smooth">
+    <html lang="sr" className="scroll-smooth">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className={`${displayFont.variable} ${textFont.variable} font-sans text-brown bg-beige`}>
         <Header />
         <div className="w-full">

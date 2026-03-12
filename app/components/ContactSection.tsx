@@ -66,8 +66,8 @@ export function ContactSection() {
               <div>
                 <h4 className="font-bold uppercase tracking-widest text-xs text-beige/50 mb-3">Kontakt</h4>
                 <div className="space-y-2">
-                  <a href="tel:+381601234567" className="block text-lg font-light hover:text-yellow transition-colors relative group w-fit">
-                    +381 60 123 4567
+                  <a href="tel:+381638024696" className="block text-lg font-light hover:text-yellow transition-colors relative group w-fit">
+                    +381 63 8024696
                     <span className="absolute -bottom-1 left-0 w-0 h-px bg-yellow transition-all duration-300 group-hover:w-full"></span>
                   </a>
                   <a href="mailto:caffeplatz@gmail.com" className="block text-lg font-light hover:text-yellow transition-colors relative group w-fit">
