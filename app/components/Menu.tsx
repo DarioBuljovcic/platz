@@ -27,9 +27,9 @@ const Subcategory = ({ sub, isFull = false }: { sub: any, isFull?: boolean }) =>
             <div className="lg:col-span-4 flex flex-col gap-6 lg:sticky lg:top-32 h-fit">
                 <div className="space-y-4">
                     <div className="w-12 h-px bg-gold"></div>
-                    <h4 className="font-display text-3xl md:text-4xl text-brown leading-tight">
+                    <h3 className="font-display text-3xl md:text-4xl text-brown leading-tight">
                         {sub.name}
-                    </h4>
+                    </h3>
                 </div>
 
                 <div className="w-48 h-48 lg:w-full lg:aspect-square rounded-2xl overflow-hidden bg-white/5 border border-white/10 relative group shadow-sm">

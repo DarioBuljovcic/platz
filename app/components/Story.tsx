@@ -1,5 +1,6 @@
 import React from 'react'
 import { FadeIn } from './FadeIn'
+import Image from 'next/image'
 
 const Story = () => {
     return (
@@ -45,20 +46,24 @@ const Story = () => {
                 <div className="lg:col-span-5 relative">
                     <FadeIn delay={400}>
                         <div className="aspect-square rounded-[2rem] overflow-hidden shadow-2xl">
-                            <img
+                            <Image
                                 src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=1200&auto=format&fit=crop"
                                 alt="Opuštena atmosfera kafića"
                                 className="w-full h-full object-cover"
+                                width={600}
+                                height={600}
                             />
                         </div>
                     </FadeIn>
 
                     <FadeIn delay={600} className="hidden md:block absolute -bottom-16 -left-16 w-3/5">
                         <div className="aspect-square rounded-[2rem] overflow-hidden shadow-2xl border-8 border-green-accent">
-                            <img
+                            <Image
                                 src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?q=80&w=800&auto=format&fit=crop"
                                 alt="Kvalitetna kafa"
                                 className="w-full h-full object-cover"
+                                width={400}
+                                height={400}
                             />
                         </div>
                     </FadeIn>

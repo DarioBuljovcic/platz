@@ -15,7 +15,7 @@ export function ContactSection() {
       <div className="max-w-7xl mx-auto relative z-10">
         <FadeIn>
           <div className="mb-24">
-            <h2 className="font-display text-6xl md:text-8xl mb-6 text-white font-bold">Platz Caffe</h2>
+            <h3 className="font-display text-6xl md:text-8xl mb-6 text-white font-bold">Platz Caffe</h3>
             <div className="w-16 h-1 bg-gold"></div>
           </div>
         </FadeIn>
@@ -87,10 +87,10 @@ export function ContactSection() {
               <div>
                 <h4 className="font-bold uppercase tracking-widest text-xs text-beige/50 mb-3">Društvene mreže</h4>
                 <div className="flex gap-4">
-                  <a href="https://www.instagram.com/caffeplatz/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-gold hover:border-gold hover:text-green-accent transition-all duration-300">
+                  <a href="https://www.instagram.com/caffeplatz/" aria-label="Platz on Instagram" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-gold hover:border-gold hover:text-green-accent transition-all duration-300">
                     <Instagram size={20} />
                   </a>
-                  <a href="https://www.facebook.com/people/Platz-Caffe/61577870382643/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-gold hover:border-gold hover:text-green-accent transition-all duration-300">
+                  <a href="https://www.facebook.com/people/Platz-Caffe/61577870382643/" aria-label="Platz on Facebook" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-gold hover:border-gold hover:text-green-accent transition-all duration-300">
                     <Facebook size={20} />
                   </a>
                 </div>

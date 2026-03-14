@@ -132,10 +132,10 @@ const Header = () => {
                         </div>
                     </div>
                     <div className="flex gap-6">
-                        <a href="https://instagram.com/caffeplatz" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white hover:text-gold hover:border-gold transition-all">
+                        <a href="https://instagram.com/caffeplatz" aria-label="Platz on Instagram" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white hover:text-gold hover:border-gold transition-all">
                             <Instagram size={24} />
                         </a>
-                        <a href="https://facebook.com/caffeplatz" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white hover:text-gold hover:border-gold transition-all">
+                        <a href="https://facebook.com/caffeplatz" aria-label="Platz on Facebook" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white hover:text-gold hover:border-gold transition-all">
                             <Facebook size={24} />
                         </a>
                     </div>
