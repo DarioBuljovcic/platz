@@ -20,7 +20,7 @@ const textFont = Outfit({
 export const metadata: Metadata = {
   metadataBase: new URL("https://platz-blue.vercel.app"),
   title: "Platz Caffe | Kafić u Subotici",
-  description: "Platz je tvoje svakodnevno mesto za predah u srcu Subotice. Kvalitetna kafa, kokteli i prijatna atmosfera na Trgu republike.",
+  description: "Platz je tvoje svakodnevno mesto za predah u srcu Subotice. Kvalitetna kafa, kokteli i prijatna atmosfera u centru grada.",
   keywords: ["kafić Subotica", "kafa Subotica", "kokteli Subotica", "Platz Caffe", "cafe Subotica", "coffee Subotica"],
   openGraph: {
     title: "Platz Caffe | Kafić u Subotici",
@@ -29,9 +29,28 @@ export const metadata: Metadata = {
     siteName: "Platz Caffe",
     locale: "sr_RS",
     type: "website",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Platz Caffe u Subotici",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Platz Caffe | Kafić u Subotici",
+    description: "Opuštena kafe kultura u Subotici.",
+    images: ["/og-image.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 
+// JSON-LD Schema
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "CafeOrCoffeeShop",
@@ -43,12 +62,25 @@ const jsonLd = {
     "postalCode": "24000",
     "addressCountry": "RS"
   },
-  "openingHours": "Mo-Su 07:00-23:00",
+  "openingHours": [
+    "Mo-Th 07:00-23:00",
+    "Fr-Sa 07:00-00:00",
+    "Su 07:00-23:00"
+  ],
   "url": "https://platz-blue.vercel.app",
   "telephone": "+381 63 8024696",
-  // "image": "https://platz-blue.vercel.app/og-image.jpg",
+  "image": "https://platz-blue.vercel.app/og-image.jpg",
   "servesCuisine": "Coffee, Cocktails",
-  "priceRange": "$$"
+  "priceRange": "$$",
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 46.1005,
+    "longitude": 19.6651
+  },
+  "sameAs": [
+    "https://instagram.com/caffeplatz",
+    "https://facebook.com/caffeplatz"
+  ]
 };
 
 export default function RootLayout({
@@ -64,7 +96,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className={`${displayFont.variable} ${textFont.variable} font-sans text-brown bg-beige`}>
+      <body className={`${displayFont.variable} ${textFont.variable} font-sans text-brown bg-green-accent`}>
         <Header />
         <div className="w-full">
           {children}

@@ -96,50 +96,54 @@ const Header = () => {
 
             {/* Mobile Menu Overlay */}
             <div
-                className={`fixed inset-0 bg-green-accent /98 z-[60] flex flex-col items-center justify-center transition-all duration-500 ease-in-out md:hidden ${isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
+                className={`fixed inset-0 z-[60] h-[100vh] flex flex-col items-center justify-center transition-all duration-500 ease-in-out md:hidden bg-green-accent/95 backdrop-blur-xl ${isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
             >
                 <button
                     onClick={() => setIsMenuOpen(false)}
-                    className="absolute top-8 right-8 text-white hover:text-gold transition-colors p-2"
+                    className="absolute top-6 right-9 text-white hover:text-gold transition-colors p-2"
                     aria-label="Close Menu"
                 >
                     <X size={32} />
                 </button>
 
-                <nav className="flex flex-col items-center gap-8 mb-12">
-                    {navLinks.map((link, index) => (
-                        <a
-                            key={link.name}
-                            href={link.href}
-                            onClick={() => setIsMenuOpen(false)}
-                            className={`font-display text-4xl text-white hover:text-gold transition-all duration-300 uppercase tracking-widest ${isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
-                            style={{ transitionDelay: `${index * 100}ms` }}
-                        >
-                            {link.name}
-                        </a>
-                    ))}
-                </nav>
+                <div className="flex flex-col items-center justify-center w-full max-w-sm px-6 gap-12">
+                    <nav className="flex flex-col items-center gap-6">
+                        {navLinks.map((link, index) => (
+                            <a
+                                key={link.name}
+                                href={link.href}
+                                onClick={() => setIsMenuOpen(false)}
+                                className={`font-display text-4xl text-white hover:text-gold transition-all duration-300 uppercase tracking-widest ${isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
+                                style={{ transitionDelay: `${index * 100}ms` }}
+                            >
+                                {link.name}
+                            </a>
+                        ))}
+                    </nav>
 
-                <div className={`flex flex-col items-center gap-6 transition-all duration-500 delay-300 ${isMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                    <div className="flex flex-col items-center gap-2 text-white/60 text-sm font-light">
-                        <div className="flex items-center gap-2">
-                            <MapPin size={14} className="text-gold" />
-                            <span>Trg Cara Jovana Nenada 9, Subotica</span>
+                    <div className={`flex flex-col items-center gap-8 transition-all duration-500 delay-300 ${isMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+                        <div className="flex flex-col items-center gap-3 text-white/60 text-sm font-light text-center">
+                            <div className="flex items-center gap-2">
+                                <MapPin size={14} className="text-gold shrink-0" />
+                                <span>Trg Cara Jovana Nenada 9, Subotica</span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                                <Phone size={14} className="text-gold shrink-0" />
+                                <a href="tel:+381601234567" className="hover:text-gold transition-colors">+381 60 123 4567</a>
+                            </div>
                         </div>
-                        <div className="flex items-center gap-2">
-                            <Phone size={14} className="text-gold" />
-                            <a href="tel:+381601234567">+381 60 123 4567</a>
+
+                        <div className="flex gap-6">
+                            <a href="https://instagram.com/caffeplatz" aria-label="Platz on Instagram" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white hover:text-gold hover:border-gold transition-all bg-white/5">
+                                <Instagram size={24} />
+                            </a>
+                            <a href="https://facebook.com/caffeplatz" aria-label="Platz on Facebook" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white hover:text-gold hover:border-gold transition-all bg-white/5">
+                                <Facebook size={24} />
+                            </a>
                         </div>
+
+                        <p className="text-[10px] text-white/30 uppercase tracking-[0.3em] font-medium">Platz © 2026</p>
                     </div>
-                    <div className="flex gap-6">
-                        <a href="https://instagram.com/caffeplatz" aria-label="Platz on Instagram" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white hover:text-gold hover:border-gold transition-all">
-                            <Instagram size={24} />
-                        </a>
-                        <a href="https://facebook.com/caffeplatz" aria-label="Platz on Facebook" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white hover:text-gold hover:border-gold transition-all">
-                            <Facebook size={24} />
-                        </a>
-                    </div>
-                    <p className="text-[10px] text-white/30 uppercase tracking-[0.3em] font-medium pt-8">Platz © 2026</p>
                 </div>
             </div>
         </header>
