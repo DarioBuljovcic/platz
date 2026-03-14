@@ -1,5 +1,6 @@
 import { Dog, Music, Sun, Sparkles } from 'lucide-react'
 import { FadeIn } from './FadeIn'
+import PageDecoration from './PageDecoration'
 
 const Highlights = () => {
     const highlights = [
@@ -21,7 +22,7 @@ const Highlights = () => {
     ]
 
     return (
-        <section className="py-20 bg-green-accent relative ">
+        <section className="py-20 bg-green-accent relative">
             <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
                 <div className="grid md:grid-cols-3 gap-12 lg:gap-20">
                     {highlights.map((item, index) => (

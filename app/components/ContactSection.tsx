@@ -1,5 +1,6 @@
 import { MapPin, Phone, Mail, Clock, Instagram, Facebook, ExternalLink } from "lucide-react";
 import { FadeIn } from "./FadeIn";
+import PageDecoration from "./PageDecoration";
 
 export function ContactSection() {
   return (
@@ -11,6 +12,13 @@ export function ContactSection() {
       {/* Layered see-through circles */}
       <div className="absolute top-1/2 left-0 w-[800px] h-[800px] border border-white/5 rounded-full -translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
       <div className="absolute top-1/2 left-0 w-[600px] h-[600px] border border-white/5 rounded-full -translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
+
+      {/* Decorative SVGs */}
+      <PageDecoration variant="wing-left" className="absolute top-40 right-1/4 w-32 -rotate-45 " opacity={.2} />
+      <PageDecoration variant="wing-right" className="absolute bottom-20 left-10 w-40 rotate-12" opacity={.1} />
+      <PageDecoration variant="diamond" className="absolute top-20 left-1/2 w-8" opacity={.2} />
+      <PageDecoration variant="dots" className="absolute top-1/2 right-10 w-20 rotate-90" opacity={.15} />
+
 
       <div className="max-w-7xl mx-auto relative z-10">
         <FadeIn>
@@ -29,6 +37,8 @@ export function ContactSection() {
               <div>
                 <h4 className="font-bold uppercase tracking-widest text-xs text-beige/50 mb-3">Adresa</h4>
                 <p className="text-lg font-light mb-4">Trg Cara Jovana Nenada 9, Subotica
+                </p>
+                <p className="text-lg font-light mb-4">Ulaz sa Trga Republike 10, Subotica
                 </p>
                 <a
                   href="https://www.google.com/maps/place/Platz+Caffe/@46.1007043,19.6640792,17z/data=!3m1!4b1!4m6!3m5!1s0x474367005daf07e1:0x758b9a3fcd52e28d!8m2!3d46.1007043!4d19.6640792!16s%2Fg%2F11zk57zppr?entry=ttu&g_ep=EgoyMDI2MDMwNS4wIKXMDSoASAFQAw%3D%3D"
