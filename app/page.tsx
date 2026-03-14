@@ -1,9 +1,8 @@
 import { ContactSection } from "./components/ContactSection";
-import { FadeIn } from "./components/FadeIn";
-import Menu from "./components/Menu";
 import Story from "./components/Story";
 import Highlights from "./components/Highlights";
 import Separator from "./components/Separator";
+import MainMenuSection from "./components/MainMenu";
 
 export default function HomePage() {
   return (
@@ -13,14 +12,15 @@ export default function HomePage() {
       <Story />
 
       <Highlights />
-      
+
       <Separator />
-      
+
       {/* SECTION 2: MENU */}
-      <Menu />
-      
+      {/* <Menu /> */}
+      <MainMenuSection />
+
       <Separator />
-      
+
       {/* SECTION 3: CONTACT */}
       <ContactSection />
     </main>

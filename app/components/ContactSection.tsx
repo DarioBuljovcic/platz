@@ -50,9 +50,9 @@ export function ContactSection() {
               </div>
               <div>
                 <h4 className="font-bold uppercase tracking-widest text-xs text-beige/50 mb-3">Radno vreme</h4>
-                <p className="text-lg font-light mb-1">Pon – Čet, Sub</p>
+                <p className="text-lg font-light mb-1">Pon – Čet, Nedelja</p>
                 <p className="text-xl font-medium mb-3">07:00 – 23:00</p>
-                <p className="text-lg font-light mb-1">Petak, Nedelja</p>
+                <p className="text-lg font-light mb-1">Petak-Subota</p>
                 <p className="text-xl font-medium">07:00 – 00:00</p>
               </div>
             </div>

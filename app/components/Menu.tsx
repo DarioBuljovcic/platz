@@ -1,7 +1,9 @@
 'use client'
-import React, { useState } from 'react'
+import React, { Suspense } from 'react'
+import Link from 'next/link'
+import { useSearchParams } from 'next/navigation'
 import { FadeIn } from './FadeIn'
-import menuData from '../data/menu.json'
+import menuData from '../data/menu_v2.json'
 
 const MenuItem = ({ item }: { item: any }) => (
     <li className="flex gap-4 md:gap-5 items-center group">
@@ -16,11 +18,7 @@ const MenuItem = ({ item }: { item: any }) => (
     </li>
 )
 
-const Subcategory = ({ sub, isFull = false }: { sub: any, isFull?: boolean }) => {
-    const limit = 5;
-    const hasMore = sub.items.length > limit;
-    const initialItems = isFull ? sub.items : sub.items.slice(0, limit);
-
+const Subcategory = ({ sub }: { sub: any }) => {
     return (
         <div className="flex flex-col lg:grid lg:grid-cols-12 gap-8 lg:gap-12 py-12 border-b border-white/10 last:border-0">
             {/* Sidebar with Title and Image */}
@@ -47,40 +45,59 @@ const Subcategory = ({ sub, isFull = false }: { sub: any, isFull?: boolean }) =>
 
             {/* Menu Items List */}
             <div className="lg:col-span-8">
-                <ul className="grid sm:grid-cols-1 md:grid-cols-2 gap-x-12 xl:gap-x-16 gap-y-6">
-                    {initialItems.map((item: any) => (
-                        <MenuItem key={item.name} item={item} />
-                    ))}
-                </ul>
-
-                {hasMore && !isFull && (
-                    <div className="flex justify-start mt-8">
-                        <a
-                            href="/menu"
-                            className="px-8 py-2.5 rounded-full border border-white/20 text-white hover:border-gold hover:text-gold transition-all text-sm font-medium hover:bg-gold/5 inline-block"
-                        >
-                            Pogledaj ceo meni
-                        </a>
+                {sub.sections ? (
+                    <div className="space-y-12">
+                        {sub.sections.map((section: any) => (
+                            <div key={section.title} className="animate-fade-in">
+                                <h4 className="text-gold text-[10px] uppercase tracking-[0.3em] font-bold mb-6 flex items-center gap-3 opacity-80">
+                                    <span className="w-6 h-px bg-gold/30"></span>
+                                    {section.title}
+                                </h4>
+                                <ul className="grid sm:grid-cols-1 md:grid-cols-2 gap-x-12 xl:gap-x-16 gap-y-6">
+                                    {section.items.map((item: any) => (
+                                        <MenuItem key={item.name} item={item} />
+                                    ))}
+                                </ul>
+                            </div>
+                        ))}
                     </div>
+                ) : (
+                    <ul className="grid sm:grid-cols-1 md:grid-cols-2 gap-x-12 xl:gap-x-16 gap-y-6">
+                        {sub.items.map((item: any) => (
+                            <MenuItem key={item.name} item={item} />
+                        ))}
+                    </ul>
                 )}
             </div>
         </div>
     );
 };
 
-const Menu = ({ isFull = false }: { isFull?: boolean }) => {
-    const [activeCategory, setActiveCategory] = useState(menuData[0].category);
+const MenuContent = () => {
+    const searchParams = useSearchParams();
+    const categoryParam = searchParams.get('cat');
+
+    // 1. Derive the active category directly from the URL. 
+    // No useState. No useEffect. No double renders.
+    const activeCategory = (() => {
+        if (!categoryParam) return menuData[0].category;
+
+        const found = menuData.find(
+            c => c.category.toLowerCase() === categoryParam.toLowerCase()
+        );
+
+        return found ? found.category : menuData[0].category;
+    })();
+
     const activeData = (menuData.find(c => c.category === activeCategory) || menuData[0]) as any;
 
     return (
         <section id="menu" className="py-24 md:py-32 px-6 md:px-12 bg-green-accent/30 relative overflow-hidden flex justify-center">
-            {/* Menu background elements */}
-
             <div className="w-full max-w-7xl mx-auto relative z-10">
                 <FadeIn>
                     <div className="text-center mb-12 md:mb-14">
                         <span className="text-gold font-bold uppercase tracking-widest text-sm mb-4 block">Naša ponuda</span>
-                        <h2 className="font-display text-6xl md:text-7xl text-brown-dark">Meni</h2>
+                        <h2 className="font-display text-6xl md:text-7xl text-brown-dark">Cenovnik</h2>
                     </div>
                 </FadeIn>
 
@@ -88,16 +105,17 @@ const Menu = ({ isFull = false }: { isFull?: boolean }) => {
                 <FadeIn delay={100}>
                     <div className="flex flex-wrap justify-center gap-3 md:gap-4 mb-16 md:mb-20">
                         {menuData.map((category) => (
-                            <button
+                            <Link
                                 key={category.category}
-                                onClick={() => setActiveCategory(category.category)}
+                                href={`/menu?cat=${category.category}`}
+                                scroll={false}
                                 className={`px-6 py-2.5 rounded-full font-medium transition-all duration-300 border ${activeCategory === category.category
                                     ? 'bg-gold text-green-accent border-gold shadow-md shadow-gold/20 transform -translate-y-1'
                                     : 'bg-transparent text-white border-white/20 hover:border-gold/50 hover:text-gold'
                                     }`}
                             >
                                 {category.category}
-                            </button>
+                            </Link>
                         ))}
                     </div>
                 </FadeIn>
@@ -108,25 +126,15 @@ const Menu = ({ isFull = false }: { isFull?: boolean }) => {
                         <div className="space-y-16">
                             {/* @ts-ignore */}
                             {activeData.subcategories ? activeData.subcategories.map((sub: any) => (
-                                <Subcategory key={sub.name} sub={sub} isFull={isFull} />
+                                <Subcategory key={sub.name} sub={sub} />
                             )) : (
                                 <div key="items">
                                     <ul className="grid lg:grid-cols-2 gap-x-12 xl:gap-x-20 gap-y-6">
                                         {/* @ts-ignore */}
-                                        {activeData.items && (isFull ? activeData.items : activeData.items.slice(0, 10)).map((item: any) => (
+                                        {activeData.items && activeData.items.map((item: any) => (
                                             <MenuItem key={item.name} item={item} />
                                         ))}
                                     </ul>
-                                    {!isFull && activeData.items && activeData.items.length > 10 && (
-                                        <div className="flex justify-center mt-12">
-                                            <a
-                                                href="/menu"
-                                                className="px-8 py-2.5 rounded-full border border-white/20 text-white hover:border-gold hover:text-gold transition-all text-sm font-medium hover:bg-gold/5"
-                                            >
-                                                Pogledaj ceo meni
-                                            </a>
-                                        </div>
-                                    )}
                                 </div>
                             )}
                         </div>
@@ -134,7 +142,15 @@ const Menu = ({ isFull = false }: { isFull?: boolean }) => {
                 </div>
             </div>
         </section>
-    )
-}
+    );
+};
 
-export default Menu
+const Menu = () => {
+    return (
+        <Suspense fallback={<div className="min-h-screen bg-green-accent"></div>}>
+            <MenuContent />
+        </Suspense>
+    );
+};
+
+export default Menu;

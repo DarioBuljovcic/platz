@@ -44,7 +44,7 @@ const Story = () => {
                 </div>
 
                 <div className="lg:col-span-5 relative">
-                    <FadeIn delay={400}>
+                    <FadeIn delay={300}>
                         <div className="aspect-square rounded-[2rem] overflow-hidden shadow-2xl">
                             <Image
                                 src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=1200&auto=format&fit=crop"
@@ -56,7 +56,7 @@ const Story = () => {
                         </div>
                     </FadeIn>
 
-                    <FadeIn delay={600} className="hidden md:block absolute -bottom-16 -left-16 w-3/5">
+                    <FadeIn delay={400} className="hidden md:block absolute -bottom-16 -left-16 w-3/5">
                         <div className="aspect-square rounded-[2rem] overflow-hidden shadow-2xl border-8 border-green-accent">
                             <Image
                                 src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?q=80&w=800&auto=format&fit=crop"

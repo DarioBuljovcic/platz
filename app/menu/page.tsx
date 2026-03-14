@@ -6,11 +6,11 @@ import { ChevronLeft } from 'lucide-react'
 
 export default function FullMenuPage() {
     return (
-        <main className="min-h-screen bg-green-accent pt-32 pb-16">
+        <main className="min-h-screen bg-green-accent pt-52 pb-16">
             <div className="max-w-7xl mx-auto px-6 md:px-12 mb-12">
                 <FadeIn>
-                    <a 
-                        href="/#menu" 
+                    <a
+                        href="/#menu"
                         className="inline-flex items-center gap-2 text-gold hover:text-white transition-colors group mb-8"
                     >
                         <ChevronLeft size={20} className="group-hover:-translate-x-1 transition-transform" />
@@ -21,7 +21,7 @@ export default function FullMenuPage() {
                 </FadeIn>
             </div>
 
-            <Menu isFull={true} />
+            <Menu />
         </main>
     )
 }

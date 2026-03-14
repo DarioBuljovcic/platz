@@ -1,0 +1,333 @@
+[
+  {
+    "category": "Alkohol",
+    "subcategories": [
+      {
+        "name": "Piva",
+        "items": [
+          { "name": "Blanc 1664", "desc": "0,33l", "price": "300din" },
+          { "name": "Carlsberg", "desc": "0,25l", "price": "330din" },
+          { "name": "Budweiser", "desc": "0,33l", "price": "300din" },
+          { "name": "Budweiser Dark", "desc": "0,33l", "price": "300din" },
+          { "name": "Lav Premium", "desc": "0,33l", "price": "270din" },
+          { "name": "San Miguel", "desc": "0,33l", "price": "450din" },
+          { "name": "Tuborg", "desc": "0,33l", "price": "300din" },
+          { "name": "Tuborg 0,00%", "desc": "0,33l", "price": "270din" },
+          { "name": "Točeni Tuborg", "desc": "0,33l/0,5l", "price": "320din/380din" },
+          { "name": "Točeni Kronenbourg Blanc", "desc": "0,33l/0,5l", "price": "320din/380din" },
+          { "name": "Somersby", "desc": "0,33l (jabuka, kruška, borovnica, mango, malina (0,00%))", "price": "350din" }
+        ]
+      },
+      {
+        "name": "Žestoka Pića",
+        "sections": [
+          {
+            "title": "Viski",
+            "items": [
+              { "name": "Jack Daniel's", "desc": "30ml", "price": "450din" },
+              { "name": "Jack Daniel's Single Barrel", "desc": "30ml", "price": "720din" },
+              { "name": "Johnnie Walker Red Label", "desc": "30ml", "price": "320din" },
+              { "name": "Johnnie Walker Black Label", "desc": "30ml", "price": "520din" },
+              { "name": "Jameson Irish Whiskey", "desc": "30ml", "price": "350din" },
+              { "name": "Chivas Regal", "desc": "30ml", "price": "500din" }
+            ]
+          },
+          {
+            "title": "Vodka",
+            "items": [
+              { "name": "Finlandia vodka", "desc": "30ml", "price": "300din" },
+              { "name": "Grey Goose", "desc": "30ml", "price": "570din" }
+            ]
+          },
+          {
+            "title": "Gin",
+            "items": [
+              { "name": "Beefeater Gin", "desc": "30ml", "price": "240din" },
+              { "name": "Beefeater Pink Gin", "desc": "30ml", "price": "240din" },
+              { "name": "Bulldog Gin", "desc": "30ml", "price": "310din" },
+              { "name": "Bombay Sapphire Gin", "desc": "30ml", "price": "300din" }
+            ]
+          },
+          {
+            "title": "Rum",
+            "items": [
+              { "name": "Bacardi rum", "desc": "30ml", "price": "310din" },
+              { "name": "Don Papa Baroko Rum", "desc": "30ml", "price": "790din" }
+            ]
+          },
+          {
+            "title": "Vermuti & Aperitivi",
+            "items": [
+              { "name": "Martini Bianco", "desc": "50ml", "price": "300din" },
+              { "name": "Martini Rosso", "desc": "50ml", "price": "300din" },
+              { "name": "Campari", "desc": "30ml", "price": "310din" },
+              { "name": "Antique Pelinkovac", "desc": "30ml", "price": "300din" },
+              { "name": "Gorki list", "desc": "50ml", "price": "270din" }
+            ]
+          },
+          {
+            "title": "Rakije",
+            "items": [
+              { "name": "Stara Sokolova šljiva", "desc": "30ml", "price": "400din" },
+              { "name": "Stara Sokolova dunja", "desc": "30ml", "price": "380din" },
+              { "name": "Stara Sokolova kajsija", "desc": "30ml", "price": "360din" },
+              { "name": "Stara Sokolova Medovača", "desc": "30ml", "price": "340din" },
+              { "name": "Zlatna rakija", "desc": "kruška, kajsija (30ml)", "price": "350din" },
+              { "name": "Takovo Viljamovka", "desc": "30ml", "price": "300din" },
+              { "name": "Meduška", "desc": "30ml", "price": "300din" }
+            ]
+          },
+          {
+            "title": "Topli Mix",
+            "items": [
+              { "name": "Crno kuvano vino", "desc": "200ml", "price": "260din" },
+              { "name": "Belo kuvano vino", "desc": "200ml", "price": "260din" },
+              { "name": "Kuvani Gorki list", "desc": "150ml", "price": "450din" },
+              { "name": "Kuvani džin", "desc": "250ml", "price": "450din" },
+              { "name": "Šumadijski čaj (Kuvana rakija)", "desc": "80ml", "price": "350din" }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Kokteli",
+        "items": [
+          { "name": "Martini Dry", "desc": "(Gin, Dry Martini) 80ml", "price": "610din" },
+          { "name": "Vodka Martini", "desc": "(Vodka, Dry Martini) 80ml", "price": "610din" },
+          { "name": "Espresso Martini", "desc": "(Vodka, sirup od kafe, espresso) 80ml", "price": "670din" },
+          { "name": "Martini Fiero & Tonic", "desc": "330ml", "price": "350din" },
+          { "name": "Margarita", "desc": "80ml", "price": "560din" },
+          { "name": "Skinny Bitch", "desc": "250ml", "price": "370din" },
+          { "name": "Moscow Mule", "desc": "250ml", "price": "450din" },
+          { "name": "Bombay Sapphire Gin Tonic", "desc": "330ml", "price": "470din" },
+          { "name": "Bramble", "desc": "250ml", "price": "550din" },
+          { "name": "Pink Gin Tonic", "desc": "330ml", "price": "430din" },
+          { "name": "Negroni", "desc": "250ml", "price": "570din" },
+          { "name": "Mojito", "desc": "330ml", "price": "450din" },
+          { "name": "Ma Tai", "desc": "330ml", "price": "650din" },
+          { "name": "Aperol Spritz", "desc": "500ml", "price": "540din" },
+          { "name": "Mimoza", "desc": "200ml", "price": "390din" }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Vina",
+    "subcategories": [
+      {
+        "name": "Vinarija Reljić",
+        "items": [
+          { "name": "Rebus Crveni", "desc": "125ml / 750ml", "price": "700din / 3400din" },
+          { "name": "Rebus Tamjanika", "desc": "125ml / 750ml", "price": "550din / 2800din" },
+          { "name": "Rebus Merlot", "desc": "125ml / 750ml", "price": "500din / 2500din" },
+          { "name": "Rebus Chardonnay", "desc": "125ml / 750ml", "price": "650din / 3200din" },
+          { "name": "Sauvignon Blanc", "desc": "125ml / 750ml", "price": "500din / 2500din" }
+        ]
+      },
+      {
+        "name": "Vinarija Petra",
+        "items": [
+          { "name": "Petra Traminac", "desc": "125ml / 750ml", "price": "500din / 2500din" },
+          { "name": "Petra Cuvée", "desc": "125ml / 750ml", "price": "900din / 4700din" },
+          { "name": "Petra Rose", "desc": "125ml / 750ml", "price": "500din / 2500din" }
+        ]
+      },
+      {
+        "name": "Vinarija Kovačević",
+        "items": [
+          { "name": "Chardonnay", "desc": "125ml / 750ml", "price": "500din / 2500din" },
+          { "name": "Aurelius", "desc": "125ml / 750ml", "price": "500din / 2500din" }
+        ]
+      },
+      {
+        "name": "Vinarija Zvonko Bogdan",
+        "items": [
+          { "name": "8 Tamburaša", "desc": "125ml / 750ml", "price": "550din / 2800din" },
+          { "name": "Život teče", "desc": "125ml / 750ml", "price": "500din / 2500din" },
+          { "name": "Cuvée No.1", "desc": "125ml / 750ml", "price": "900din / 5000din" }
+        ]
+      },
+      {
+        "name": "Penušavo Vino",
+        "items": [
+          { "name": "Prosecco Villa Sandi", "desc": "125ml / 750ml", "price": "400din / 2000din" },
+          { "name": "Špricer", "desc": "300ml", "price": "220din" }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Topli Napitci",
+    "subcategories": [
+      {
+        "name": "Kafa",
+        "sections": [
+          {
+            "title": "Espresso Kafe",
+            "items": [
+              { "name": "Espresso", "desc": "", "price": "190din" },
+              { "name": "Espresso sa mlekom", "desc": "", "price": "210din" },
+              { "name": "Macchiato", "desc": "", "price": "210din" },
+              { "name": "Dupli espresso", "desc": "", "price": "310din" },
+              { "name": "Dupli espresso sa mlekom", "desc": "", "price": "330din" },
+              { "name": "Espresso sa šlagom", "desc": "", "price": "230din" },
+              { "name": "Espresso bez kofeina", "desc": "", "price": "200din" },
+              { "name": "Espresso bez kofeina sa mlekom", "desc": "", "price": "220din" },
+              { "name": "Americano", "desc": "", "price": "190din" },
+              { "name": "Cappuccino", "desc": "", "price": "220din" },
+              { "name": "Latte Macchiato", "desc": "", "price": "240din" },
+              { "name": "Caffe latte", "desc": "", "price": "240din" },
+              { "name": "Domaća kafa", "desc": "", "price": "170din" },
+              { "name": "Domaća kafa sa mlekom", "desc": "", "price": "190din" }
+            ]
+          },
+          {
+            "title": "Hladne Kafe",
+            "items": [
+              { "name": "Freddo Espresso", "desc": "", "price": "220din" },
+              { "name": "Freddo Cappuccino", "desc": "", "price": "230din" },
+              { "name": "Iced Americano", "desc": "", "price": "200din" },
+              { "name": "Iced Latte", "desc": "", "price": "240din" },
+              { "name": "Iced Coffee", "desc": "", "price": "270din" }
+            ]
+          },
+          {
+            "title": "Specijal Kafe",
+            "items": [
+              { "name": "Latte Macchiato Special", "desc": "(lešnik, kokos, karamela, vanila, cimet)", "price": "260din" },
+              { "name": "Moka / Karamel Moka", "desc": "", "price": "270din" },
+              { "name": "Irish Coffee", "desc": "", "price": "360din" },
+              { "name": "Baileys Coffee", "desc": "", "price": "360din" }
+            ]
+          },
+          {
+            "title": "Nescafe",
+            "items": [
+              { "name": "Nescafe", "desc": "", "price": "210din" },
+              { "name": "Nescafe sa šlagom", "desc": "", "price": "240din" },
+              { "name": "Nescafe Special", "desc": "(aroma po izboru)", "price": "260din" },
+              { "name": "Dalgona", "desc": "", "price": "270din" },
+              { "name": "Dalgona Special", "desc": "", "price": "290din" }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Topla Čokolada, Matcha i Čaj",
+        "sections": [
+          {
+            "title": "Matcha",
+            "items": [
+              { "name": "Matcha Latte", "desc": "", "price": "350din" },
+              { "name": "Matcha Special", "desc": "(aroma po izboru)", "price": "380din" },
+              { "name": "Fruity Iced Matcha", "desc": "(malina, jagoda, breskva)", "price": "390din" }
+            ]
+          },
+          {
+            "title": "Rinfuzni Čajevi",
+            "items": [
+              { "name": "Althaus čaj (400ml)", "desc": "Casablanca mint, Summer fruits, Sicilian orange, Camomile Meadow, Bavarian Mint, Ginger breeze, Kiwi Colada, Imperial Earl Gray", "price": "260din" },
+              { "name": "Althaus Warm and Cozy black tea", "desc": "Aromatičan crni čaj sa narandžom i cimetom (400ml)", "price": "350din" },
+              { "name": "Đumbirko u šolji (Chai Latte)", "desc": "150ml", "price": "350din" }
+            ]
+          },
+          {
+            "title": "Tople Čokolade",
+            "items": [
+              { "name": "Crna topla čokolada", "desc": "200ml", "price": "240din" },
+              { "name": "Bela topla čokolada", "desc": "200ml", "price": "240din" },
+              { "name": "Topla čokolada sa keksom", "desc": "(plazma, oreo, lotus) 200ml", "price": "290din" },
+              { "name": "Topla čokolada Special", "desc": "(višnja, malina, jagoda, pomorandža) 200ml", "price": "270din" }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Smoothie i Šejkovi",
+    "subcategories": [
+      {
+        "name": "Smuti",
+        "items": [
+          { "name": "Platz smuti", "desc": "(celer, jabuka, limeta, spanać, banana) 300ml", "price": "480din" },
+          { "name": "Banana-malina smuti", "desc": "(banana, malina, mleko, med) 300ml", "price": "460din" },
+          { "name": "Banana-kikiriki smuti", "desc": "(banana, kikiriki puter, mleko) 300ml", "price": "460din" },
+          { "name": "Red fruit smuti", "desc": "(miks šumskog voća, maline, banana, jabuka) 300ml", "price": "440din" }
+        ]
+      },
+      {
+        "name": "Šejkovi",
+        "items": [
+          { "name": "Plazma šejk", "desc": "300ml", "price": "370din" },
+          { "name": "Banana-plazma šejk", "desc": "300ml", "price": "380din" },
+          { "name": "Lotus šejk", "desc": "300ml", "price": "370din" },
+          { "name": "Oreo šejk", "desc": "300ml", "price": "370din" },
+          { "name": "Coffee šejk", "desc": "300ml", "price": "370din" },
+          { "name": "Domaći Milkshake", "desc": "(jagoda, malina, višnja) 300ml", "price": "360din" },
+          { "name": "Protein šejk", "desc": "(vanila, čokolada) 300ml", "price": "350din" },
+          { "name": "Milkshake", "desc": "(vanila, čokolada) 300ml", "price": "230din" }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Sokovi i Voda",
+    "subcategories": [
+      {
+        "name": "Limunade i Ceđeni Sokovi",
+        "sections": [
+          {
+            "title": "Limunade",
+            "items": [
+              { "name": "Limunada", "desc": "300ml / 500ml", "price": "230din / 250din" },
+              { "name": "Limunada sa đumbirom i nanom", "desc": "500ml", "price": "300din" },
+              { "name": "Mojito limunada", "desc": "500ml", "price": "300din" },
+              { "name": "Limunada sa voćem", "desc": "500ml (jagoda ili malina)", "price": "300din" }
+            ]
+          },
+          {
+            "title": "Ceđeni Sokovi",
+            "items": [
+              { "name": "Ceđena pomorandža", "desc": "200ml / 300ml / 500ml", "price": "300din / 380din / 440din" },
+              { "name": "Ceđeni grejpfrut", "desc": "200ml / 300ml / 500ml", "price": "340din / 420din / 480din" },
+              { "name": "Ceđena jabuka", "desc": "300ml", "price": "300din" },
+              { "name": "Hladno ceđeni celer i jabuka", "desc": "300ml", "price": "450din" },
+              { "name": "Healthy mix", "desc": "300ml", "price": "390din" },
+              { "name": "Citrus apple mix", "desc": "300ml", "price": "390din" }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Vode i Bezalkoholna Pića",
+        "sections": [
+          {
+            "title": "Vode",
+            "items": [
+              { "name": "Rosa", "desc": "0,33l / 0,75l", "price": "180din / 270din" },
+              { "name": "VodaVoda", "desc": "0,33l", "price": "180din" },
+              { "name": "VodaVoda gazirana", "desc": "0,25l", "price": "180din" },
+              { "name": "Knjaz Miloš", "desc": "0,25l / 0,75l", "price": "210din / 310din" }
+            ]
+          },
+          {
+            "title": "Gazirani Sokovi",
+            "items": [
+              { "name": "Cola / Fanta / Sprite", "desc": "250ml", "price": "270din" },
+              { "name": "Schweppes", "desc": "250ml", "price": "280din" },
+              { "name": "Cockta", "desc": "250ml", "price": "270din" },
+              { "name": "San Pellegrino", "desc": "250ml", "price": "270din" }
+            ]
+          },
+          {
+            "title": "Energetski Napici",
+            "items": [
+              { "name": "Red bull", "desc": "250ml", "price": "390din" }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

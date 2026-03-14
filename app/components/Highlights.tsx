@@ -1,4 +1,3 @@
-import React from 'react'
 import { Dog, Music, Sun, Sparkles } from 'lucide-react'
 import { FadeIn } from './FadeIn'
 
@@ -22,7 +21,7 @@ const Highlights = () => {
     ]
 
     return (
-        <section className="py-20 bg-green-accent relative overflow-hidden">
+        <section className="py-20 bg-green-accent relative ">
             <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
                 <div className="grid md:grid-cols-3 gap-12 lg:gap-20">
                     {highlights.map((item, index) => (
@@ -42,7 +41,7 @@ const Highlights = () => {
                     ))}
                 </div>
             </div>
-            
+
             {/* Subtle decorative background light */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-4xl max-h-4xl bg-gold/5 rounded-full blur-[120px] pointer-events-none"></div>
         </section>

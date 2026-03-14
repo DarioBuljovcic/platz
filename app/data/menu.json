@@ -415,7 +415,7 @@
     ]
   },
   {
-    "category": "Topli Napici",
+    "category": "Topli Napitci",
     "subcategories": [
       {
         "name": "Kafa",
@@ -579,6 +579,66 @@
             "name": "Dodatak šlag",
             "desc": "",
             "price": "30 rsd"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Smoothie i Šejkovi",
+    "subcategories": [
+      {
+        "name": "Miks Napici",
+        "items": [
+          {
+            "name": "PLATZ Smoothie",
+            "desc": "(celer, jabuka, limeta, spanać, banana)",
+            "price": "480 rsd"
+          },
+          {
+            "name": "BANANA-MALINA Smoothie",
+            "desc": "(banana, malina, mleko, med)",
+            "price": "460 rsd"
+          },
+          {
+            "name": "BANANA-KIKIRIKI Smoothie",
+            "desc": "(banana, kikiriki puter, mleko)",
+            "price": "460 rsd"
+          },
+          {
+            "name": "RED FRUIT Smoothie",
+            "desc": "(miks šumskog voća, maline, banana, jabuka)",
+            "price": "440 rsd"
+          },
+          {
+            "name": "PLAZMA shake",
+            "desc": "",
+            "price": "370 rsd"
+          },
+          {
+            "name": "BANANA-PLAZMA shake",
+            "desc": "",
+            "price": "380 rsd"
+          },
+          {
+            "name": "OREO shake",
+            "desc": "",
+            "price": "370 rsd"
+          },
+          {
+            "name": "Protein shake",
+            "desc": "(banana, mleko, whey protein vanila ili cokolada)",
+            "price": "350 rsd"
+          },
+          {
+            "name": "Coffee shake",
+            "desc": "(mleko, espresso, sladoled, plazma)",
+            "price": "370 rsd"
+          },
+          {
+            "name": "Milkshake",
+            "desc": "(vanila, čokolada, jagoda)",
+            "price": "230 rsd"
           }
         ]
       }
@@ -784,66 +844,6 @@
             "name": "Ultra energy",
             "desc": "",
             "price": "260 rsd"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "category": "Smoothie i Šejkovi",
-    "subcategories": [
-      {
-        "name": "Miks Napici",
-        "items": [
-          {
-            "name": "PLATZ Smoothie",
-            "desc": "(celer, jabuka, limeta, spanać, banana)",
-            "price": "480 rsd"
-          },
-          {
-            "name": "BANANA-MALINA Smoothie",
-            "desc": "(banana, malina, mleko, med)",
-            "price": "460 rsd"
-          },
-          {
-            "name": "BANANA-KIKIRIKI Smoothie",
-            "desc": "(banana, kikiriki puter, mleko)",
-            "price": "460 rsd"
-          },
-          {
-            "name": "RED FRUIT Smoothie",
-            "desc": "(miks šumskog voća, maline, banana, jabuka)",
-            "price": "440 rsd"
-          },
-          {
-            "name": "PLAZMA shake",
-            "desc": "",
-            "price": "370 rsd"
-          },
-          {
-            "name": "BANANA-PLAZMA shake",
-            "desc": "",
-            "price": "380 rsd"
-          },
-          {
-            "name": "OREO shake",
-            "desc": "",
-            "price": "370 rsd"
-          },
-          {
-            "name": "Protein shake",
-            "desc": "(banana, mleko, whey protein vanila ili cokolada)",
-            "price": "350 rsd"
-          },
-          {
-            "name": "Coffee shake",
-            "desc": "(mleko, espresso, sladoled, plazma)",
-            "price": "370 rsd"
-          },
-          {
-            "name": "Milkshake",
-            "desc": "(vanila, čokolada, jagoda)",
-            "price": "230 rsd"
           }
         ]
       }

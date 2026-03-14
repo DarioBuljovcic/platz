@@ -51,10 +51,10 @@ const Header = () => {
                             </div>
                         </div>
                         <div className="flex items-center gap-4 border-l border-white/10 pl-6">
-                            <a href="https://instagram.com/caffeplatz" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">
+                            <a href="https://instagram.com/caffeplatz" aria-label="Platz on Instagram" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">
                                 <Instagram size={14} />
                             </a>
-                            <a href="https://facebook.com/caffeplatz" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">
+                            <a href="https://facebook.com/caffeplatz" aria-label="Platz on Facebook" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">
                                 <Facebook size={14} />
                             </a>
                         </div>
@@ -66,11 +66,11 @@ const Header = () => {
                     {/* Brand */}
                     <a href="/" className="flex items-center gap-4 group">
                         <div className="w-10 h-10 md:w-12 md:h-12 bg-white/5 text-gold rounded-xl overflow-hidden flex items-center justify-center font-display font-bold text-2xl shadow-md group-hover:bg-white/10 group-hover:shadow-lg transition-all duration-300 transform group-hover:-translate-y-1 border border-white/10">
-                            <Image src="/Logo.webp" alt="Logo" width={50} height={50} />
+                            <Image src="/Logo.webp" alt="Logo" width={50} height={50} priority fetchPriority='high' />
                         </div>
                         <div className="hidden sm:block">
                             <h1 className="font-display font-semibold text-lg md:text-xl tracking-wide uppercase text-white m-0 leading-none">Platz</h1>
-                            <p className="text-[9px] md:text-[10px] text-white/50 mt-1 tracking-widest uppercase font-semibold">Zajednica ljubitelja kafe</p>
+                            <p className="text-[9px] md:text-[10px] text-white/70 mt-1 tracking-widest uppercase font-semibold">Zajednica ljubitelja kafe</p>
                         </div>
                     </a>
 
