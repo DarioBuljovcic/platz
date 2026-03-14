@@ -7,7 +7,7 @@ import ScrollToTop from '../components/ScrollToTop'
 
 export default function FullMenuPage() {
     return (
-        <main className="min-h-screen bg-green-accent pt-52 pb-16">
+        <main className="min-h-screen bg-green-accent md:pt-52 pt-32 pb-16">
             <ScrollToTop />
             <div className="max-w-7xl mx-auto px-6 md:px-12 mb-12">
                 <FadeIn>

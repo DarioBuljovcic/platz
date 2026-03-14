@@ -80,8 +80,6 @@
           {
             "title": "Topli Mix",
             "items": [
-              { "name": "Crno kuvano vino", "desc": "200ml", "price": "260din" },
-              { "name": "Belo kuvano vino", "desc": "200ml", "price": "260din" },
               { "name": "Kuvani Gorki list", "desc": "150ml", "price": "450din" },
               { "name": "Kuvani džin", "desc": "250ml", "price": "450din" },
               { "name": "Šumadijski čaj (Kuvana rakija)", "desc": "80ml", "price": "350din" }
@@ -115,43 +113,55 @@
     "category": "Vina",
     "subcategories": [
       {
-        "name": "Vinarija Reljić",
-        "items": [
-          { "name": "Rebus Crveni", "desc": "125ml / 750ml", "price": "700din / 3400din" },
-          { "name": "Rebus Tamjanika", "desc": "125ml / 750ml", "price": "550din / 2800din" },
-          { "name": "Rebus Merlot", "desc": "125ml / 750ml", "price": "500din / 2500din" },
-          { "name": "Rebus Chardonnay", "desc": "125ml / 750ml", "price": "650din / 3200din" },
-          { "name": "Sauvignon Blanc", "desc": "125ml / 750ml", "price": "500din / 2500din" }
+        "name": "Vino",
+        "sections": [
+          {
+            "title": "Vinarija Reljić",
+            "items": [
+              { "name": "Rebus Crveni", "desc": "125ml / 750ml", "price": "700din / 3400din" },
+              { "name": "Rebus Tamjanika", "desc": "125ml / 750ml", "price": "550din / 2800din" },
+              { "name": "Rebus Merlot", "desc": "125ml / 750ml", "price": "500din / 2500din" },
+              { "name": "Rebus Chardonnay", "desc": "125ml / 750ml", "price": "650din / 3200din" },
+              { "name": "Sauvignon Blanc", "desc": "125ml / 750ml", "price": "500din / 2500din" }
+            ]
+          },
+          {
+            "title": "Vinarija Petra",
+            "items": [
+              { "name": "Petra Traminac", "desc": "125ml / 750ml", "price": "500din / 2500din" },
+              { "name": "Petra Cuvée", "desc": "125ml / 750ml", "price": "900din / 4700din" },
+              { "name": "Petra Rose", "desc": "125ml / 750ml", "price": "500din / 2500din" }
+            ]
+          },
+          {
+            "title": "Vinarija Kovačević",
+            "items": [
+              { "name": "Chardonnay", "desc": "125ml / 750ml", "price": "500din / 2500din" },
+              { "name": "Aurelius", "desc": "125ml / 750ml", "price": "500din / 2500din" }
+            ]
+          },
+          {
+            "title": "Vinarija Zvonko Bogdan",
+            "items": [
+              { "name": "8 Tamburaša", "desc": "125ml / 750ml", "price": "550din / 2800din" },
+              { "name": "Život teče", "desc": "125ml / 750ml", "price": "500din / 2500din" },
+              { "name": "Cuvée No.1", "desc": "125ml / 750ml", "price": "900din / 5000din" }
+            ]
+          }
         ]
       },
       {
-        "name": "Vinarija Petra",
-        "items": [
-          { "name": "Petra Traminac", "desc": "125ml / 750ml", "price": "500din / 2500din" },
-          { "name": "Petra Cuvée", "desc": "125ml / 750ml", "price": "900din / 4700din" },
-          { "name": "Petra Rose", "desc": "125ml / 750ml", "price": "500din / 2500din" }
-        ]
-      },
-      {
-        "name": "Vinarija Kovačević",
-        "items": [
-          { "name": "Chardonnay", "desc": "125ml / 750ml", "price": "500din / 2500din" },
-          { "name": "Aurelius", "desc": "125ml / 750ml", "price": "500din / 2500din" }
-        ]
-      },
-      {
-        "name": "Vinarija Zvonko Bogdan",
-        "items": [
-          { "name": "8 Tamburaša", "desc": "125ml / 750ml", "price": "550din / 2800din" },
-          { "name": "Život teče", "desc": "125ml / 750ml", "price": "500din / 2500din" },
-          { "name": "Cuvée No.1", "desc": "125ml / 750ml", "price": "900din / 5000din" }
-        ]
-      },
-      {
-        "name": "Penušavo Vino",
+        "name": "Penušavo vino",
         "items": [
           { "name": "Prosecco Villa Sandi", "desc": "125ml / 750ml", "price": "400din / 2000din" },
           { "name": "Špricer", "desc": "300ml", "price": "220din" }
+        ]
+      },
+      {
+        "name": "Kuvano vino",
+        "items": [
+          { "name": "Crno kuvano vino", "desc": "200ml", "price": "260din" },
+          { "name": "Belo kuvano vino", "desc": "200ml", "price": "260din" }
         ]
       }
     ]
