@@ -14,7 +14,7 @@ const Story = () => {
             <div className="hidden lg:block absolute bottom-20 right-20 w-96 h-96 border-[1px] border-white/5 rounded-[4rem] rotate-12 pointer-events-none"></div>
 
             {/* Decorative SVGs */}
-            <PageDecoration variant="wing-left" className="absolute top-20 left-10 w-32 rotate-12" opacity={0.2} />
+            <PageDecoration variant="wing-left" className="hidden lg:block absolute top-20 left-10 w-32 rotate-12" opacity={0.2} />
             <PageDecoration variant="wing-right" className="absolute bottom-40 right-10 w-32 -rotate-12" opacity={0.15} />
             <PageDecoration variant="diamond" className="absolute top-1/2 left-[5%] w-8 rotate-45" opacity={0.2} />
             <PageDecoration variant="diamond-outline" className="absolute top-1/3 right-[10%] w-12 rotate-12" opacity={0.1} />
