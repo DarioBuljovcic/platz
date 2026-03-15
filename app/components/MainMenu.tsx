@@ -14,33 +14,33 @@ export default function MainMenuSection() {
     const categories = [
         {
             id: 1,
+            title: "Topli Napitci",
+            description: "Savršen početak dana",
+            image: "/images/coffee.jpg",
+            link: "/menu?cat=Topli Napitci",
+        },
+        {
+            id: 2,
+            title: "Smoothie i Šejkovi",
+            description: "Sveže i zdravo",
+            image: "/images/smoothie.jpg",
+            link: "/menu?cat=Smoothie i Šejkovi",
+        },
+        {
+            id: 3,
             title: "Alkohol",
             description: "Piva, žestina i kokteli",
             image: "/images/coctail.jpg",
             link: "/menu?cat=Alkohol",
         },
         {
-            id: 2,
+            id: 4,
             title: "Vina",
             description: "Pažljivo birane etikete",
             image: "/images/alchocol.jpg",
             link: "/menu?cat=Vina",
         },
-        {
-            id: 3,
-            title: "Topli Napitci",
-            description: "Savršen početak dana",
-            image: "/images/coffee.jpg",
-            link: "/menu?cat=Topli Napitci",
-        },
 
-        {
-            id: 4,
-            title: "Smoothie i Šejkovi",
-            description: "Sveže i zdravo",
-            image: "/images/smoothie.jpg",
-            link: "/menu?cat=Smoothie i Šejkovi",
-        },
     ];
 
     useEffect(() => {

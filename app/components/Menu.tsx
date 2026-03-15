@@ -3,6 +3,7 @@ import React, { Suspense } from 'react'
 import Link from 'next/link'
 import { useSearchParams } from 'next/navigation'
 import { FadeIn } from './FadeIn'
+import Image from 'next/image'
 import menuData from '../data/menu_v2.json'
 
 const MenuItem = ({ item }: { item: any }) => (
@@ -17,6 +18,49 @@ const MenuItem = ({ item }: { item: any }) => (
         </div>
     </li>
 )
+
+const SpecialMenuItem = ({ item }: { item: any }) => (
+    <li className="flex gap-4 md:gap-5 items-start group transition-all duration-300 bg-gold/5 p-4 rounded-2xl border border-gold/20 shadow-sm">
+        {item.image && (
+            <div className="w-20 h-20 md:w-24 md:h-24 rounded-xl overflow-hidden shrink-0 border border-gold/30 shadow-sm relative">
+                <Image
+                    src={item.image}
+                    alt={item.name}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+            </div>
+        )}
+        <div className="flex-1 py-0.5">
+            <div className="flex justify-between items-end gap-2 md:gap-4 mb-1 text-wrap">
+                <div className="flex flex-col w-full">
+                    <span className="font-display w-full text-base md:text-lg text-brown group-hover:text-gold transition-colors leading-tight flex items-start gap-2">
+                        <p>{item.name}</p>
+                        <span className="text-[9px] uppercase tracking-widest bg-gold text-green-accent px-2 py-0.5 mt-1 rounded-full font-bold shadow-sm">
+                            Special
+                        </span>
+                    </span>
+                    <div className='flex justify-between items-center gap-2 md:gap-4 mb-1 text-wrap'>
+                        {item.desc && <p className="text-[10px] md:text-xs text-brown/60 font-light leading-relaxed">{item.desc}</p>}
+                        <span className="font-display text-sm md:text-base font-medium text-brown whitespace-nowrap">{item.price}</span>
+                    </div>
+                </div>
+            </div>
+            {item.longDesc && (
+                <p className="text-[11px] md:text-[13px] text-brown-dark/80 font-normal leading-relaxed mt-3 italic border-l-2 border-gold/40 pl-4 py-1">
+                    {item.longDesc}
+                </p>
+            )}
+        </div>
+    </li>
+)
+
+const ItemRenderer = ({ item }: { item: any }) => {
+    if (item.image || item.longDesc) {
+        return <SpecialMenuItem item={item} />
+    }
+    return <MenuItem item={item} />
+}
 
 const Subcategory = ({ sub }: { sub: any }) => {
     return (
@@ -55,7 +99,7 @@ const Subcategory = ({ sub }: { sub: any }) => {
                                 </h4>
                                 <ul className="grid sm:grid-cols-1 md:grid-cols-2 gap-x-12 xl:gap-x-16 gap-y-6">
                                     {section.items.map((item: any) => (
-                                        <MenuItem key={item.name} item={item} />
+                                        <ItemRenderer key={item.name} item={item} />
                                     ))}
                                 </ul>
                             </div>
@@ -64,7 +108,7 @@ const Subcategory = ({ sub }: { sub: any }) => {
                 ) : (
                     <ul className="grid sm:grid-cols-1 md:grid-cols-2 gap-x-12 xl:gap-x-16 gap-y-6">
                         {sub.items.map((item: any) => (
-                            <MenuItem key={item.name} item={item} />
+                            <ItemRenderer key={item.name} item={item} />
                         ))}
                     </ul>
                 )}
@@ -132,7 +176,7 @@ const MenuContent = () => {
                                     <ul className="grid lg:grid-cols-2 gap-x-12 xl:gap-x-20 gap-y-6">
                                         {/* @ts-ignore */}
                                         {activeData.items && activeData.items.map((item: any) => (
-                                            <MenuItem key={item.name} item={item} />
+                                            <ItemRenderer key={item.name} item={item} />
                                         ))}
                                     </ul>
                                 </div>
