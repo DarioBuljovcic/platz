@@ -21,9 +21,9 @@ const Story = () => {
             <PageDecoration variant="dots" className="absolute bottom-20 left-1/4 w-16" opacity={0.15} />
 
             <div className="max-w-7xl mx-auto grid lg:grid-cols-12 gap-16 lg:gap-24 items-center relative z-10">
-                <div className="lg:col-span-7 space-y-16">
+                <div className="lg:col-span-6 space-y-16">
                     <FadeIn>
-                        <h1 className="font-display text-5xl md:text-7xl lg:text-8xl text-white leading-[1.05] tracking-tight">
+                        <h1 className="font-display text-4xl md:text-6xl lg:text-7xl text-white leading-[1.05] tracking-tight">
                             Uspori, <br />
                             <span className="italic font-light text-brown">druži se</span> i <span className="font-medium">uživaj.</span>
                         </h1>
@@ -37,24 +37,19 @@ const Story = () => {
                     </FadeIn>
 
                     <FadeIn delay={200}>
-                        <div className="space-y-8 text-lg md:text-xl text-white/70 font-light leading-relaxed max-w-xl">
-                            <p className="text-2xl md:text-3xl text-white mb-12 leading-tight">
+                        <div className="space-y-8 text-base md:text-lg text-white/70 font-light leading-relaxed max-w-xl">
+                            <p className="text-xl md:text-2xl text-white mb-12 leading-tight">
                                 <span className="font-semibold">Platz</span> je više od mesta za kafu — to je mesto gde uživaš u trenutku.
                             </p>
                             <p>
                                 Smešten u jednoj od najstarijih zgrada na Trgu Republike, naš kafić čuva duh stare Subotice pod secesijskim tornjićima koji decenijama krase centar grada.
                             </p>
-                            <p>
-                                Uživajte u savršenom espresu pripremljenom po tradicionalnoj recepturi. Svaka šoljica je mali ritual posvećen uživanju.
-                            </p>
-                            <p>
-                                Mesto gde vreme usporava, bilo da tražite miran kutak za učenje ili mesto za razgovor sa prijateljima, Cafe Platz je vaša oaza u srcu Subotice.
-                            </p>
+
                         </div>
                     </FadeIn>
                 </div>
 
-                <div className="lg:col-span-5 relative">
+                <div className="lg:col-span-6 relative">
                     <FadeIn delay={300}>
                         <div className="aspect-square rounded-[2rem] overflow-hidden shadow-2xl">
                             <Image
@@ -67,7 +62,7 @@ const Story = () => {
                         </div>
                     </FadeIn>
 
-                    <FadeIn delay={400} className="hidden md:block absolute -bottom-16 -left-16 w-3/5">
+                    <FadeIn delay={400} className="hidden md:block absolute -bottom-16 -left-16 w-2/3">
                         <div className="aspect-square rounded-[2rem] overflow-hidden shadow-2xl border-8 border-green-accent">
                             <Image
                                 src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?q=80&w=800&auto=format&fit=crop"
@@ -81,20 +76,30 @@ const Story = () => {
                 </div>
             </div>
 
-            <div className="max-w-4xl mx-auto mt-40 text-center flex flex-col items-center">
-                <FadeIn>
-                    <h2 className="font-display text-3xl md:text-4xl text-white italic mb-8">
-                        Sa pogledom na Plavu fontanu i dostojanstvenu siluetu Gradske kuće, ovde se vreme ne meri minutima, već trenucima.
-                    </h2>
-                    <p className="text-lg text-white/70 font-light">
-                        Posebna pažnja posvećena je kafi, njenom poreklu, pripremi i načinu na koji se služi. Svaka šolja rezultat je znanja, strpljenja i poštovanja prema ritualu ispijanja kafe, kakav prilici mestu koje neguje duh grada.
-                    </p>
-                </FadeIn>
-                <FadeIn delay={100}>
-                    <div className="flex flex-wrap gap-4 mt-8">
-                        <a href="/o-nama" className="btn-primary">Saznaj više o nama</a>
-                    </div>
-                </FadeIn>
+            <div className="max-w-7xl mx-auto mt-40 grid lg:grid-cols-12 gap-16 lg:gap-24 items-center relative z-10">
+                <div className="lg:col-span-12 xl:col-span-7">
+                    <FadeIn>
+                        <div className="aspect-[16/9] md:aspect-[21/9] xl:aspect-[16/10] rounded-[2rem] overflow-hidden shadow-2xl">
+                            <Image
+                                src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=80&w=1200&auto=format&fit=crop"
+                                alt="Subotica arhitektura"
+                                className="w-full h-full object-cover"
+                                width={1200}
+                                height={800}
+                            />
+                        </div>
+                    </FadeIn>
+                </div>
+                <div className="lg:col-span-12 xl:col-span-5 space-y-8">
+                    <FadeIn delay={100}>
+                        <h2 className="font-display text-2xl md:text-3xl text-white italic">
+                            Sa pogledom na Plavu fontanu i dostojanstvenu siluetu Gradske kuće, ovde se vreme ne meri minutima, već trenucima.
+                        </h2>
+                        <div className="mt-8">
+                            <a href="/o-nama" className="btn-primary">Saznaj više o nama</a>
+                        </div>
+                    </FadeIn>
+                </div>
             </div>
         </section>
     )

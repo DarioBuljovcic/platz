@@ -1,6 +1,7 @@
 'use client'
 import { Menu, X, MapPin, Phone, Instagram, Facebook } from 'lucide-react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { useState, useEffect } from 'react'
 
 const Header = () => {
@@ -41,9 +42,11 @@ const Header = () => {
                 <div className={`overflow-hidden transition-all duration-500 ease-in-out hidden md:block ${isAtTop ? 'max-h-12 opacity-100 mb-4' : 'max-h-0 opacity-0 mb-0'}`}>
                     <div className="flex justify-between items-center py-2 px-6 bg-white/5 backdrop-blur-md rounded-full border border-white/10 text-[11px] uppercase tracking-[0.15em] font-medium text-white/60">
                         <div className="flex items-center gap-8">
-                            <div className="flex items-center gap-2">
+                            <div className="flex items-center gap-2 hover:text-gold transition-colors">
                                 <MapPin size={12} className="text-gold" />
-                                <span>Trg Cara Jovana Nenada 9, Subotica</span>
+                                <Link href="https://www.google.com/maps/place/Platz+Caffe/@46.1007043,19.6640792,17z/data=!3m1!4b1!4m6!3m5!1s0x474367005daf07e1:0x758b9a3fcd52e28d!8m2!3d46.1007043!4d19.6640792!16s%2Fg%2F11zk57zppr?entry=ttu&g_ep=EgoyMDI2MDMwNS4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+                                    Trg Cara Jovana Nenada 9, Subotica
+                                </Link>
                             </div>
                             <div className="flex items-center gap-2">
                                 <Phone size={12} className="text-gold" />
@@ -125,11 +128,11 @@ const Header = () => {
                         <div className="flex flex-col items-center gap-3 text-white/60 text-sm font-light text-center">
                             <div className="flex items-center gap-2">
                                 <MapPin size={14} className="text-gold shrink-0" />
-                                <span>Trg Cara Jovana Nenada 9, Subotica</span>
+                                <Link href="https://www.google.com/maps/place/Platz+Caffe/@46.1007043,19.6640792,17z/data=!3m1!4b1!4m6!3m5!1s0x474367005daf07e1:0x758b9a3fcd52e28d!8m2!3d46.1007043!4d19.6640792!16s%2Fg%2F11zk57zppr?entry=ttu&g_ep=EgoyMDI2MDMwNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" >Trg Cara Jovana Nenada 9, Subotica</Link>
                             </div>
                             <div className="flex items-center gap-2">
                                 <Phone size={14} className="text-gold shrink-0" />
-                                <a href="tel:+381601234567" className="hover:text-gold transition-colors">+381 60 123 4567</a>
+                                <a href="tel:+381638024696" className="hover:text-gold transition-colors">+381 63 802 4696</a>
                             </div>
                         </div>
 

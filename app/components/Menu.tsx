@@ -57,12 +57,16 @@ const SpecialMenuItem = ({ item }: { item: any }) => (
 
 const ItemRenderer = ({ item }: { item: any }) => {
     if (item.image || item.longDesc) {
-        return <SpecialMenuItem item={item} />
+        return <span className="md:hidden"><SpecialMenuItem item={item} /></span>;
     }
     return <MenuItem item={item} />
 }
 
 const Subcategory = ({ sub }: { sub: any }) => {
+    const specialItems = (sub.sections
+        ? sub.sections.flatMap((s: any) => s.items)
+        : (sub.items || [])).filter((item: any) => item.image || item.longDesc);
+
     return (
         <div className="flex flex-col lg:grid lg:grid-cols-12 gap-8 lg:gap-12 py-12 border-b border-white/10 last:border-0">
             {/* Sidebar with Title and Image */}
@@ -85,6 +89,16 @@ const Subcategory = ({ sub }: { sub: any }) => {
                         </div>
                     )}
                 </div>
+
+                {specialItems.length > 0 && (
+                    <div className="space-y-4">
+                        <ul className="space-y-4">
+                            {specialItems.map((item: any) => (
+                                <SpecialMenuItem key={item.name} item={item} />
+                            ))}
+                        </ul>
+                    </div>
+                )}
             </div>
 
             {/* Menu Items List */}
