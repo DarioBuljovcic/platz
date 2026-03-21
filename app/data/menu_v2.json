@@ -1,6 +1,7 @@
 [
   {
     "category": "Kafe i topli napici",
+    "slug": "kafe-i-topli-napici",
     "subcategories": [
       {
         "name": "Espresso kafe",
@@ -110,6 +111,7 @@
   },
   {
     "category": "Osvežavajući bezalkoholni napici",
+    "slug": "osvezavajuci-bezalkoholni-napici",
     "subcategories": [
       {
         "name": "Limunade i ceđeni sokovi",
@@ -225,6 +227,7 @@
   },
   {
     "category": "Alkoholna pića",
+    "slug": "alkoholna-pica",
     "subcategories": [
       {
         "name": "Pivo",
@@ -421,6 +424,7 @@
   },
   {
     "category": "Kokteli",
+    "slug": "kokteli",
     "subcategories": [
       {
         "name": "Kokteli",

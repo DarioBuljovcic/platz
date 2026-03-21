@@ -11,9 +11,6 @@ const partners = [
 ];
 
 const PartnersLine = () => {
-  // Triple the partners array to ensure a seamless loop
-  const displayPartners = [...partners, ...partners, ...partners];
-
   return (
     <section className="py-12 bg-green-accent overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 mb-8 text-center">
@@ -23,29 +20,35 @@ const PartnersLine = () => {
       </div>
 
       <div className="relative w-full">
-        {/* Fading Sides Overlay */}
         <div className="mask-fade-out">
-          <div className="flex w-fit animate-scroll whitespace-nowrap">
-            {displayPartners.map((partner, index) => (
+          <div className="flex w-max animate-scroll whitespace-nowrap">
+            {[0, 1, 2].map((copy) => (
               <div
-                key={index}
-                className="flex flex-col items-center justify-center mx-8 md:mx-16 min-w-[150px] group"
+                key={copy}
+                className="flex shrink-0 items-center gap-16 pr-16 md:gap-24 md:pr-24"
+                aria-hidden={copy === 1}
               >
-                {/* Logo Placeholder - User will add src later */}
-                <div className="w-24 h-24 mb-4 relative opacity-40 group-hover:opacity-100 transition-opacity duration-500 flex justify-center">
-                  <Image
-                    src={partner.logo}
-                    alt={partner.name}
-                    width={96}
-                    height={96}
-                    className="object-contain"
-                  />
-                </div>
-                <div className="flex flex-col items-center text-center">
-                  <span className="text-white/80 font-display text-lg tracking-wide group-hover:text-gold transition-colors duration-500">
-                    {partner.name}
-                  </span>
-                </div>
+                {partners.map((partner) => (
+                  <div
+                    key={`${copy}-${partner.name}`}
+                    className="group flex min-w-[150px] shrink-0 flex-col items-center justify-center"
+                  >
+                    <div className="relative mb-4 flex h-24 w-24 justify-center opacity-40 transition-opacity duration-500 group-hover:opacity-100">
+                      <Image
+                        src={partner.logo}
+                        alt={partner.name}
+                        width={96}
+                        height={96}
+                        className="object-contain"
+                      />
+                    </div>
+                    <div className="flex flex-col items-center text-center">
+                      <span className="font-display text-lg tracking-wide text-white/80 transition-colors duration-500 group-hover:text-gold">
+                        {partner.name}
+                      </span>
+                    </div>
+                  </div>
+                ))}
               </div>
             ))}
           </div>

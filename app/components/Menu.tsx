@@ -1,12 +1,22 @@
 'use client'
-import React, { Suspense } from 'react'
+import React from 'react'
 import Link from 'next/link'
-import { useSearchParams } from 'next/navigation'
 import { FadeIn } from './FadeIn'
 import Image from 'next/image'
-import menuData from '../data/menu_v2.json'
+import type { MenuCategoryData, MenuItem as MenuItemType, MenuSubcategory } from '../lib/menu'
 
-const MenuItem = ({ item }: { item: any }) => (
+type CategoryNavItem = {
+    label: string
+    slug: string
+}
+
+type MenuProps = {
+    categories: CategoryNavItem[]
+    activeSlug: string
+    activeData: MenuCategoryData
+}
+
+const MenuItem = ({ item }: { item: MenuItemType }) => (
     <li className="flex gap-4 md:gap-5 items-center group">
         <div className="flex-1 py-0.5">
             <div className="flex justify-between items-end gap-2 md:gap-4 mb-1 text-wrap">
@@ -19,7 +29,7 @@ const MenuItem = ({ item }: { item: any }) => (
     </li>
 )
 
-const SpecialMenuItem = ({ item }: { item: any }) => (
+const SpecialMenuItem = ({ item }: { item: MenuItemType }) => (
     <li className="flex gap-4 md:gap-5 items-start group transition-all duration-300 bg-gold/5 p-4 rounded-2xl border border-gold/20 shadow-sm">
         {item.image && (
             <div className="w-20 h-20 md:w-24 md:h-24 rounded-xl overflow-hidden shrink-0 border border-gold/30 shadow-sm relative">
@@ -55,17 +65,17 @@ const SpecialMenuItem = ({ item }: { item: any }) => (
     </li>
 )
 
-const ItemRenderer = ({ item }: { item: any }) => {
+const ItemRenderer = ({ item }: { item: MenuItemType }) => {
     if (item.image || item.longDesc) {
         return <span className="md:hidden"><SpecialMenuItem item={item} /></span>;
     }
     return <MenuItem item={item} />
 }
 
-const Subcategory = ({ sub }: { sub: any }) => {
+const Subcategory = ({ sub }: { sub: MenuSubcategory }) => {
     const specialItems = (sub.sections
-        ? sub.sections.flatMap((s: any) => s.items)
-        : (sub.items || [])).filter((item: any) => item.image || item.longDesc);
+        ? sub.sections.flatMap((s) => s.items)
+        : (sub.items || [])).filter((item) => item.image || item.longDesc);
 
     return (
         <div className="flex flex-col lg:grid lg:grid-cols-12 gap-8 lg:gap-12 py-12 border-b border-white/10 last:border-0">
@@ -80,7 +90,12 @@ const Subcategory = ({ sub }: { sub: any }) => {
 
                 <div className="w-48 h-48 lg:w-full lg:aspect-square rounded-2xl overflow-hidden bg-white/5 border border-white/10 relative group shadow-sm">
                     {sub.image ? (
-                        <img src={sub.image} alt={sub.name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                        <Image
+                            src={sub.image}
+                            alt={sub.name}
+                            fill
+                            className="object-cover transition-transform duration-700 group-hover:scale-105"
+                        />
                     ) : (
                         <div className="w-full h-full flex items-center justify-center text-white/20 bg-white/[0.02]">
                             <svg className="w-16 h-16 opacity-30" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -93,7 +108,7 @@ const Subcategory = ({ sub }: { sub: any }) => {
                 {specialItems.length > 0 && (
                     <div className="space-y-4">
                         <ul className="space-y-4">
-                            {specialItems.map((item: any) => (
+                            {specialItems.map((item) => (
                                 <SpecialMenuItem key={item.name} item={item} />
                             ))}
                         </ul>
@@ -105,14 +120,14 @@ const Subcategory = ({ sub }: { sub: any }) => {
             <div className="lg:col-span-8">
                 {sub.sections ? (
                     <div className="space-y-12">
-                        {sub.sections.map((section: any) => (
+                        {sub.sections.map((section) => (
                             <div key={section.title} className="animate-fade-in">
                                 <h4 className="text-gold text-[10px] uppercase tracking-[0.3em] font-bold mb-6 flex items-center gap-3 opacity-80">
                                     <span className="w-6 h-px bg-gold/30"></span>
                                     {section.title}
                                 </h4>
                                 <ul className="grid sm:grid-cols-1 md:grid-cols-2 gap-x-12 xl:gap-x-16 gap-y-6">
-                                    {section.items.map((item: any) => (
+                                    {section.items.map((item) => (
                                         <ItemRenderer key={item.name} item={item} />
                                     ))}
                                 </ul>
@@ -121,7 +136,7 @@ const Subcategory = ({ sub }: { sub: any }) => {
                     </div>
                 ) : (
                     <ul className="grid sm:grid-cols-1 md:grid-cols-2 gap-x-12 xl:gap-x-16 gap-y-6">
-                        {sub.items.map((item: any) => (
+                        {sub.items?.map((item) => (
                             <ItemRenderer key={item.name} item={item} />
                         ))}
                     </ul>
@@ -131,24 +146,7 @@ const Subcategory = ({ sub }: { sub: any }) => {
     );
 };
 
-const MenuContent = () => {
-    const searchParams = useSearchParams();
-    const categoryParam = searchParams.get('cat');
-
-    // 1. Derive the active category directly from the URL. 
-    // No useState. No useEffect. No double renders.
-    const activeCategory = (() => {
-        if (!categoryParam) return menuData[0].category;
-
-        const found = menuData.find(
-            c => c.category.toLowerCase() === categoryParam.toLowerCase()
-        );
-
-        return found ? found.category : menuData[0].category;
-    })();
-
-    const activeData = (menuData.find(c => c.category === activeCategory) || menuData[0]) as any;
-
+const Menu = ({ categories, activeSlug, activeData }: MenuProps) => {
     return (
         <section id="menu" className="py-24 md:py-32 px-6 md:px-12 bg-green-accent/30 relative overflow-hidden flex justify-center">
             <div className="w-full max-w-7xl mx-auto relative z-10">
@@ -162,34 +160,32 @@ const MenuContent = () => {
                 {/* Categories Navigation */}
                 <FadeIn delay={100}>
                     <div className="flex flex-wrap justify-center gap-3 md:gap-4 mb-16 md:mb-20">
-                        {menuData.map((category) => (
+                        {categories.map((category) => (
                             <Link
-                                key={category.category}
-                                href={`/menu?cat=${category.category}`}
+                                key={category.slug}
+                                href={`/menu?cat=${category.slug}`}
                                 scroll={false}
-                                className={`px-6 py-2.5 rounded-full font-medium transition-all duration-300 border ${activeCategory === category.category
+                                className={`px-6 py-2.5 rounded-full font-medium transition-all duration-300 border ${activeSlug === category.slug
                                     ? 'bg-gold text-green-accent border-gold shadow-md shadow-gold/20 transform -translate-y-1'
                                     : 'bg-transparent text-white border-white/20 hover:border-gold/50 hover:text-gold'
                                     }`}
                             >
-                                {category.category}
+                                {category.label}
                             </Link>
                         ))}
                     </div>
                 </FadeIn>
 
                 {/* Active Category Items */}
-                <div key={activeCategory} className="animate-fade-in w-full">
+                <div key={activeSlug} className="animate-fade-in w-full">
                     <FadeIn delay={200}>
                         <div className="space-y-16">
-                            {/* @ts-ignore */}
-                            {activeData.subcategories ? activeData.subcategories.map((sub: any) => (
+                            {activeData.subcategories ? activeData.subcategories.map((sub) => (
                                 <Subcategory key={sub.name} sub={sub} />
                             )) : (
                                 <div key="items">
                                     <ul className="grid lg:grid-cols-2 gap-x-12 xl:gap-x-20 gap-y-6">
-                                        {/* @ts-ignore */}
-                                        {activeData.items && activeData.items.map((item: any) => (
+                                        {activeData.items?.map((item) => (
                                             <ItemRenderer key={item.name} item={item} />
                                         ))}
                                     </ul>
@@ -200,14 +196,6 @@ const MenuContent = () => {
                 </div>
             </div>
         </section>
-    );
-};
-
-const Menu = () => {
-    return (
-        <Suspense fallback={<div className="min-h-screen bg-green-accent"></div>}>
-            <MenuContent />
-        </Suspense>
     );
 };
 

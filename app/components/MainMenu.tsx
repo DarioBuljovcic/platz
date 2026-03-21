@@ -10,35 +10,34 @@ export default function MainMenuSection() {
     const [activeCard, setActiveCard] = useState<number | null>(null);
     const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
-    // Array of your menu categories to make the code clean and easy to edit
     const categories = [
         {
             id: 1,
-            title: "Topli Napitci",
+            title: "Kafe i topli napici",
             description: "Savršen početak dana",
             image: "/images/coffee.jpg",
-            link: "/menu?cat=Topli Napitci",
+            categorySlug: "kafe-i-topli-napici",
         },
         {
             id: 2,
-            title: "Smoothie i Šejkovi",
-            description: "Sveže i zdravo",
+            title: "Bezalkoholni napici",
+            description: "Sveže i osvežavajuće",
             image: "/images/smoothie.jpg",
-            link: "/menu?cat=Smoothie i Šejkovi",
+            categorySlug: "osvezavajuci-bezalkoholni-napici",
         },
         {
             id: 3,
-            title: "Alkohol",
-            description: "Piva, žestina i kokteli",
-            image: "/images/coctail.jpg",
-            link: "/menu?cat=Alkohol",
+            title: "Alkoholna pića",
+            description: "Piva, vina i žestina",
+            image: "/images/alchocol.jpg",
+            categorySlug: "alkoholna-pica",
         },
         {
             id: 4,
-            title: "Vina",
-            description: "Pažljivo birane etikete",
-            image: "/images/alchocol.jpg",
-            link: "/menu?cat=Vina",
+            title: "Kokteli",
+            description: "Klasični i autorski miksovi",
+            image: "/images/coctail.jpg",
+            categorySlug: "kokteli",
         },
 
     ];
@@ -123,7 +122,7 @@ export default function MainMenuSection() {
                                 className="h-full"
                             >
                                 <Link
-                                    href={category.link}
+                                    href={`/menu?cat=${category.categorySlug}`}
                                     className={`group relative h-[450px] rounded-3xl overflow-hidden cursor-pointer block border border-white/5 transition-all duration-500 ${activeCard === index ? "ring-2 ring-gold/30 shadow-2xl shadow-gold/10" : "lg:hover:ring-2 lg:hover:ring-gold/30 lg:hover:shadow-2xl lg:hover:shadow-gold/10"
                                         }`}
                                 >

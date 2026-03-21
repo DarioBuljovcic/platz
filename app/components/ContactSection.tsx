@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail, Clock, Instagram, Facebook, ExternalLink } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Instagram, Facebook, ExternalLink, Megaphone } from "lucide-react";
 import { FadeIn } from "./FadeIn";
 import PageDecoration from "./PageDecoration";
 
@@ -92,7 +92,7 @@ export function ContactSection() {
           <FadeIn delay={400}>
             <div className="space-y-6">
               <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center">
-                <Instagram className="text-gold" size={24} />
+                <Megaphone className="text-gold" size={24} />
               </div>
               <div>
                 <h4 className="font-bold uppercase tracking-widest text-xs text-beige/50 mb-3">Društvene mreže</h4>
