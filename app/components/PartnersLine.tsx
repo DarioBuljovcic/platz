@@ -42,11 +42,6 @@ const PartnersLine = () => {
                         className="object-contain"
                       />
                     </div>
-                    <div className="flex flex-col items-center text-center">
-                      <span className="font-display text-lg tracking-wide text-white/80 transition-colors duration-500 group-hover:text-gold">
-                        {partner.name}
-                      </span>
-                    </div>
                   </div>
                 ))}
               </div>

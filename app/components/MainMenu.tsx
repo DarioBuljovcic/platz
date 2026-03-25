@@ -23,7 +23,7 @@ export default function MainMenuSection() {
             title: "Bezalkoholni napici",
             description: "Sveže i osvežavajuće",
             image: "/images/smoothie.jpg",
-            categorySlug: "osvezavajuci-bezalkoholni-napici",
+            categorySlug: "bezalkoholni-napici",
         },
         {
             id: 3,

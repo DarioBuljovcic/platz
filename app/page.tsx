@@ -12,12 +12,14 @@ export default function HomePage() {
 
       {/* SECTION 1: OUR STORY */}
       <Story />
-      {/* SECTION 2: HIGHTLIGHTS */}
-      <Highlights />
+
+
+      {/* SECTION 2: MENU */}
+      <MainMenuSection />
       <Separator />
 
-      {/* SECTION 3: MENU */}
-      <MainMenuSection />
+      {/* SECTION 3: HIGHTLIGHTS */}
+      <Highlights />
       <Separator />
 
       {/* SECTION 4: REVIEWS */}
