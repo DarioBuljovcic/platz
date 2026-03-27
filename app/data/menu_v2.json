@@ -67,7 +67,7 @@
       },
       {
         "name": "Matcha i čajevi",
-        "image": "/images/oreo.avif",
+        "image": "/images/maca.avif",
         "sections": [
           {
             "title": "Matcha",
@@ -101,6 +101,7 @@
       },
       {
         "name": "Tople čokolade",
+        "image": "/images/oreo.avif",
         "items": [
           { "name": "Crna topla čokolada (200ml)", "desc": "", "price": "240rsd" },
           { "name": "Bela topla čokolada (200ml)", "desc": "", "price": "240rsd" },
