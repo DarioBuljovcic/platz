@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/og-image.avif",
         width: 1200,
         height: 630,
         alt: "Platz Caffe u Subotici",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Platz Caffe | Kafić u Subotici",
     description: "Opuštena kafe kultura u Subotici.",
-    images: ["/og-image.jpg"],
+    images: ["/og-image.avif"],
   },
   robots: {
     index: true,
@@ -69,7 +69,7 @@ const jsonLd = {
   ],
   "url": "https://platz-blue.vercel.app",
   "telephone": "+381 63 8024696",
-  "image": "https://platz-blue.vercel.app/og-image.jpg",
+  "image": "https://platz-blue.vercel.app/og-image.avif",
   "servesCuisine": "Coffee, Cocktails",
   "priceRange": "$$",
   "geo": {

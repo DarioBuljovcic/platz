@@ -26,6 +26,7 @@
       },
       {
         "name": "Hladne kafe",
+        "image": "/images/sejk-kafa.avif",
         "items": [
           { "name": "Affogato", "desc": "espresso, sladoled od vanile", "price": "280rsd" },
           { "name": "Freddo Espresso", "desc": "", "price": "220rsd" },
@@ -66,6 +67,7 @@
       },
       {
         "name": "Matcha i čajevi",
+        "image": "/images/oreo.avif",
         "sections": [
           {
             "title": "Matcha",
@@ -151,6 +153,7 @@
       },
       {
         "name": "Smuti i šejkovi",
+        "image": "/images/sejk.avif",
         "sections": [
           {
             "title": "Smuti",
@@ -178,6 +181,7 @@
       },
       {
         "name": "Vode i sokovi",
+        "image": "/images/voda.avif",
         "sections": [
           {
             "title": "Vode",
@@ -231,6 +235,7 @@
     "subcategories": [
       {
         "name": "Pivo",
+        "image": "/images/pivo.avif",
         "sections": [
           {
             "title": "Flaširana piva",
@@ -257,6 +262,7 @@
       },
       {
         "name": "Vina",
+        "image": "/images/petra.avif",
         "sections": [
           {
             "title": "Vinarija Reljić",
@@ -334,9 +340,9 @@
             "items": [
               { "name": "Jagermeister (30ml)", "desc": "", "price": "300rsd" },
               { "name": "Antique Pelinkovac (30ml)", "desc": "", "price": "290rsd" },
-              { "name": "Gorki list (50ml)", "desc": "", "price": "270rsd", "image": "/images/bitter-gorki-list.png", "longDesc": "Jedinstven, autentičan i prepoznatljiv. Gorki List je najpoznatiji biljni liker na ovim prostorima, napravljen od 27 vrsta lekovitog bilja." },
+              { "name": "Gorki list (50ml)", "desc": "", "price": "270rsd", "image": "/images/bitter-gorki-list.avif", "longDesc": "Jedinstven, autentičan i prepoznatljiv. Gorki List je najpoznatiji biljni liker na ovim prostorima, napravljen od 27 vrsta lekovitog bilja." },
               { "name": "Dupli Gorki list (100ml)", "desc": "", "price": "500rsd" },
-              { "name": "Liqueur Quince & Honey (30ml)", "desc": "", "price": "300rsd", "image": "/images/quince-honey.jpeg", "longDesc": "Liker Quince Honey predstavlja jedinstvenu kombinaciju pažljivo odabrane dunje i prirodnog meda, spojenu u bogat i aromatičan napitak koji odiše toplinom i tradicijom." },
+              { "name": "Liqueur Quince & Honey (30ml)", "desc": "", "price": "300rsd", "image": "/images/quince-honey.avif", "longDesc": "Liker Quince Honey predstavlja jedinstvenu kombinaciju pažljivo odabrane dunje i prirodnog meda, spojenu u bogat i aromatičan napitak koji odiše toplinom i tradicijom." },
               { "name": "Bailey's (30ml)", "desc": "", "price": "380rsd" },
               { "name": "Bajadera liker (30ml)", "desc": "", "price": "350rsd" }
             ]
@@ -412,6 +418,7 @@
       },
       {
         "name": "Topla alkoholna pića",
+        "image": "/images/gorki.avif",
         "items": [
           { "name": "Crno kuvano vino (200ml)", "desc": "", "price": "260rsd" },
           { "name": "Belo kuvano vino (200ml)", "desc": "", "price": "260rsd" },

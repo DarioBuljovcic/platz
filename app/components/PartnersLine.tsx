@@ -3,11 +3,11 @@ import React from 'react';
 import Image from 'next/image';
 
 const partners = [
-  { name: "Mixer", logo: "/logos/mixer.png" },
-  { name: "Gorki list", logo: "/logos/gorki_list.png" },
-  { name: "VodaVoda", logo: "/logos/vodavoda.png" },
-  { name: "LavAzza", logo: "/logos/lavazza.png" },
-  { name: "BeoStock", logo: "/logos/beostok.png" },
+  { name: "Mixer", logo: "/logos/mixer.avif" },
+  { name: "Gorki list", logo: "/logos/gorki_list.avif" },
+  { name: "VodaVoda", logo: "/logos/vodavoda.avif" },
+  { name: "LavAzza", logo: "/logos/lavazza.avif" },
+  { name: "BeoStock", logo: "/logos/beostok.avif" },
 ];
 
 const PartnersLine = () => {

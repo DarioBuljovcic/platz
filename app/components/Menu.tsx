@@ -89,7 +89,7 @@ const Subcategory = ({ sub }: { sub: MenuSubcategory }) => {
                 </div>
 
                 {sub.image && (
-                    <div className="w-48 h-48 lg:w-full lg:aspect-square rounded-2xl overflow-hidden bg-white/5 border border-white/10 relative group shadow-sm">
+                    <div className="w-48 h-48 lg:h-70 lg:w-70    lg:aspect-1/1 rounded-2xl overflow-hidden bg-white/5 border border-white/10 relative group shadow-sm">
 
                         <Image
                             src={sub.image}
