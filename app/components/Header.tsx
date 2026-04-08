@@ -50,7 +50,7 @@ const Header = () => {
                             </div>
                             <div className="flex items-center gap-2">
                                 <Phone size={12} className="text-gold" />
-                                <a href="tel:+381601234567" className="hover:text-gold transition-colors">+381 60 123 4567</a>
+                                <a href="tel:+381638024696" className="hover:text-gold transition-colors">+381 63 8024696</a>
                             </div>
                         </div>
                         <div className="flex items-center gap-4 border-l border-white/10 pl-6">

@@ -2,6 +2,7 @@ import React from 'react'
 import { FadeIn } from './FadeIn'
 import Image from 'next/image'
 import PageDecoration from './PageDecoration'
+import Separator from './Separator'
 
 const Story = () => {
     return (
@@ -23,23 +24,23 @@ const Story = () => {
             <div className="max-w-7xl mx-auto grid lg:grid-cols-12 gap-16 lg:gap-24 items-center relative z-10">
                 <div className="lg:col-span-6 space-y-16">
                     <FadeIn>
-                        <h1 className="font-display text-4xl md:text-6xl lg:text-7xl text-white leading-[1.05] tracking-tight">
+                        <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-white leading-[1.05] tracking-tight">
                             Uspori, <br />
-                            <span className="italic font-light text-brown">druži se</span> i <span className="font-medium">uživaj.</span>
+                            <span className="italic font-light text-brown">druži se</span> i uživaj.
                         </h1>
                     </FadeIn>
 
                     <FadeIn delay={100}>
                         <div className="flex flex-wrap gap-4 mt-8">
-                            <a href="#menu" className="btn-primary">Pogledaj meni</a>
-                            <a href="#contact" className="btn-outline">Pronađi nas</a>
+                            <a href="#menu" className="btn-outline">Pogledaj meni</a>
+                            <a href="#contact" className="btn-primary">Pronađi nas</a>
                         </div>
                     </FadeIn>
 
                     <FadeIn delay={200}>
                         <div className="space-y-8 text-base md:text-lg text-white/70 font-light leading-relaxed max-w-xl">
                             <p className="text-xl md:text-2xl text-white mb-12 leading-tight">
-                                <span className="font-semibold">Platz</span> je više od mesta za kafu — to je mesto gde uživaš u trenutku.
+                                <span className="font-semibold">Platz</span> je više od mesta za kafu to je mesto gde uživaš u trenutku.
                             </p>
                             <p>
                                 Smešten u jednoj od najstarijih zgrada na Trgu Republike, naš kafić čuva duh stare Subotice pod secesijskim tornjićima koji decenijama krase centar grada.
@@ -51,37 +52,36 @@ const Story = () => {
 
                 <div className="lg:col-span-6 relative">
                     <FadeIn delay={300}>
-                        <div className="aspect-square rounded-[2rem] overflow-hidden shadow-2xl">
+                        <div className="aspect-square rounded-[2rem] overflow-hidden shadow-2xl relative">
                             <Image
-                                src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=1200&auto=format&fit=crop"
+                                src="/images/TBP-1006.avif"
                                 alt="Opuštena atmosfera kafića"
-                                className="w-full h-full object-cover"
-                                width={600}
-                                height={600}
+                                className="object-cover object-[50%_20%]"
+                                fill
+                                sizes="(max-width: 768px) 100vw, 50vw"
                             />
                         </div>
                     </FadeIn>
 
-                    <FadeIn delay={400} className="hidden md:block absolute -bottom-16 -left-16 w-2/3">
-                        <div className="aspect-square rounded-[2rem] overflow-hidden shadow-2xl border-8 border-green-accent">
+                    <FadeIn delay={400} className="hidden md:block absolute md:-bottom-16 -right-16 w-2/3">
+                        <div className="aspect-square rounded-[2rem] overflow-hidden shadow-2xl border-8 border-green-accent relative">
                             <Image
-                                src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?q=80&w=800&auto=format&fit=crop"
+                                src="/images/TBP-1031.avif"
                                 alt="Kvalitetna kafa"
-                                className="w-full h-full object-cover"
-                                width={400}
-                                height={400}
+                                className="object-cover"
+                                fill
+                                sizes="(max-width: 768px) 50vw, 33vw"
                             />
                         </div>
                     </FadeIn>
                 </div>
             </div>
-
             <div className="max-w-7xl mx-auto mt-40 grid lg:grid-cols-12 gap-16 lg:gap-24 items-center relative z-10">
                 <div className="lg:col-span-12 xl:col-span-7">
                     <FadeIn>
                         <div className="aspect-[16/9] md:aspect-[21/9] xl:aspect-[16/10] rounded-[2rem] overflow-hidden shadow-2xl">
                             <Image
-                                src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=80&w=1200&auto=format&fit=crop"
+                                src="/images/TBP-1027.jpg"
                                 alt="Subotica arhitektura"
                                 className="w-full h-full object-cover"
                                 width={1200}
