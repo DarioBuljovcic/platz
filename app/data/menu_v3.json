@@ -1,0 +1,1100 @@
+[
+  {
+    "category": "Kafe i topli napici",
+    "slug": "kafe-i-topli-napici",
+    "subcategories": [
+      {
+        "name": "Espresso kafe",
+        "items": [
+          { "name": "Domaća kafa", "desc": "", "price": "170 rsd." },
+          { "name": "Domaća kafa sa mlekom", "desc": "", "price": "190 rsd." },
+          { "name": "Espresso", "desc": "", "price": "190 rsd." },
+          { "name": "Espresso sa mlekom", "desc": "", "price": "230 rsd." },
+          { "name": "Espresso sa šlagom", "desc": "", "price": "240 rsd." },
+          { "name": "Macchiato", "desc": "", "price": "230 rsd." },
+          { "name": "Dupli espresso", "desc": "", "price": "310 rsd." },
+          {
+            "name": "Dupli espresso sa mlekom",
+            "desc": "",
+            "price": "340 rsd."
+          },
+          { "name": "Espresso bez kofeina", "desc": "", "price": "220 rsd." },
+          {
+            "name": "Espresso bez kofeina sa mlekom",
+            "desc": "",
+            "price": "240 rsd."
+          },
+          { "name": "Americano", "desc": "", "price": "200 rsd." },
+          { "name": "Cappuccino", "desc": "", "price": "240 rsd." },
+          { "name": "Latte Macchiato", "desc": "", "price": "240 rsd." },
+          { "name": "Caffe latte", "desc": "", "price": "240 rsd." },
+          { "name": "Dodatak sojino mleko", "desc": "", "price": "70 rsd." },
+          { "name": "Dodatak bademovo mleko", "desc": "", "price": "100 rsd." },
+          { "name": "Dodatak šlag", "desc": "", "price": "30 rsd." }
+        ]
+      },
+      {
+        "name": "Hladne kafe",
+        "image": "/images/sejk-kafa.avif",
+        "items": [
+          {
+            "name": "Affogato",
+            "desc": "(espresso, sladoled od vanile)",
+            "price": "280 rsd."
+          },
+          { "name": "Freddo Espresso", "desc": "", "price": "220 rsd." },
+          { "name": "Freddo Cappuccino", "desc": "", "price": "230 rsd." },
+          { "name": "Cremespresso", "desc": "", "price": "300 rsd." },
+          {
+            "name": "Iced Latte",
+            "desc": "(aroma po izboru: lešnik, kokos, karamela, vanila, cimet)",
+            "price": "290 rsd."
+          },
+          { "name": "Iced Coffee", "desc": "", "price": "270 rsd." },
+          { "name": "Espresso Tonic", "desc": "", "price": "280 rsd." },
+          {
+            "name": "Espresso Tonic Special",
+            "desc": "(aroma po izboru: lešnik, kokos, karamela, vanila, cimet)",
+            "price": "300 rsd."
+          }
+        ]
+      },
+      {
+        "name": "Nescafe i Specijal kafe",
+        "sections": [
+          {
+            "title": "Nescafe",
+            "items": [
+              { "name": "Nescafe", "desc": "", "price": "220 rsd." },
+              { "name": "Nescafe sa šlagom", "desc": "", "price": "250 rsd." },
+              {
+                "name": "Nescafe Special",
+                "desc": "(aroma po izboru: lešnik, kokos, karamela, vanila, cimet)",
+                "price": "260 rsd."
+              },
+              { "name": "Dalgona", "desc": "", "price": "270 rsd." },
+              {
+                "name": "Dalgona Special",
+                "desc": "(aroma po izboru: lešnik, kokos, karamela, vanila, cimet)",
+                "price": "290 rsd."
+              }
+            ]
+          },
+          {
+            "title": "Specijal kafe",
+            "items": [
+              {
+                "name": "Latte Macchiato Special",
+                "desc": "(aroma po izboru: lešnik, kokos, karamela, vanila, cimet)",
+                "price": "290 rsd."
+              },
+              { "name": "Moka", "desc": "", "price": "270 rsd." },
+              { "name": "Karamel Moka", "desc": "", "price": "270 rsd." },
+              { "name": "Irish Coffee", "desc": "", "price": "360 rsd." },
+              { "name": "Baileys Coffee", "desc": "", "price": "360 rsd." },
+              { "name": "Bajadera Coffee", "desc": "", "price": "360 rsd." }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Matcha i čajevi",
+        "image": "/images/maca.avif",
+        "sections": [
+          {
+            "title": "Matcha",
+            "items": [
+              { "name": "Matcha Latte", "desc": "", "price": "350 rsd." },
+              {
+                "name": "Matcha Special",
+                "desc": "(aroma po izboru: lešnik, kokos, karamela, vanila, cimet)",
+                "price": "380 rsd."
+              },
+              {
+                "name": "Fruity Iced Matcha",
+                "desc": "(voćni pire po izboru: malina, jagoda, breskva)",
+                "price": "400 rsd."
+              }
+            ]
+          },
+          {
+            "title": "Rinfuzni čajevi",
+            "items": [
+              {
+                "name": "Althaus čaj (400ml)",
+                "desc": "Casablanca Mint | Summer Fruits | Sicilian Orange | Camomile Meadow | Bavarian Mint | Ginger Breeze | Kiwi Colada | Imperial Earl Gray",
+                "price": "260 rsd."
+              },
+              {
+                "name": "Althaus Warm and Cozy flavoured black tea (400ml)",
+                "desc": "Aromatičan crni čaj obogaćen toplim notama narandže i cimeta. Idealna zimska kombinacija koja pruža osećaj udobnosti, topline i blagosti. Savršen za trenutke opuštanja.",
+                "price": "350 rsd."
+              },
+              {
+                "name": "Đumbirko u šolji (Chai Latte) (150ml)",
+                "desc": "",
+                "price": "350 rsd."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Tople čokolade",
+        "image": "/images/oreo.avif",
+        "items": [
+          {
+            "name": "Topla čokolada (200ml) (crna, bela)",
+            "desc": "",
+            "price": "240 rsd."
+          },
+          {
+            "name": "Topla čokolada sa keksom (200ml)",
+            "desc": "(keks po izboru: plazma, oreo, lotus)",
+            "price": "290 rsd."
+          },
+          {
+            "name": "Topla čokolada Special (200ml)",
+            "desc": "(aroma po izboru: višnja, malina, jagoda, crvena pomorandža, lešnik, kokos, karamela, vanila, cimet)",
+            "price": "270 rsd."
+          },
+          { "name": "Dodatak plazma", "desc": "", "price": "50 rsd." }
+        ]
+      },
+      {
+        "name": "Kombo",
+        "items": [
+          {
+            "name": "Kombo Platz 1: Espresso + ceđena pomorandža (200ml)",
+            "desc": "",
+            "price": "380 rsd."
+          },
+          {
+            "name": "Kombo Platz 2: Espresso + ceđena jabuka (200ml)",
+            "desc": "",
+            "price": "300 rsd."
+          },
+          {
+            "name": "Kombo Cedevita: Espresso + Cedevita (200ml)",
+            "desc": "",
+            "price": "310 rsd."
+          },
+          {
+            "name": "Kombo Cockta: Espresso + Cockta (250ml)",
+            "desc": "",
+            "price": "430 rsd."
+          },
+          {
+            "name": "Kombo Coca-Cola: Espresso + Coca-Cola (250ml)",
+            "desc": "",
+            "price": "430 rsd."
+          },
+          {
+            "name": "Kombo Rosa: Espresso + Rosa (330ml)",
+            "desc": "",
+            "price": "370 rsd."
+          },
+          {
+            "name": "Komplet kafa: Domaća kafa + soda + rakija (30ml) + ratluk",
+            "desc": "",
+            "price": "400 rsd."
+          },
+          {
+            "name": "Praznični kombo: 3+1 gratis Stara Sokolova Medovača (30ml)",
+            "desc": "",
+            "price": "1020 rsd."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Bezalkoholni napici",
+    "slug": "bezalkoholni-napici",
+    "subcategories": [
+      {
+        "name": "Limunade i ceđeni sokovi",
+        "sections": [
+          {
+            "title": "Limunade",
+            "items": [
+              {
+                "name": "Limunada (300ml/500ml)",
+                "desc": "",
+                "price": "250/290 rsd."
+              },
+              {
+                "name": "Limunada sa đumbirom i nanom (500ml)",
+                "desc": "",
+                "price": "300 rsd."
+              },
+              {
+                "name": "Mojito limunada (500ml)",
+                "desc": "",
+                "price": "300 rsd."
+              },
+              {
+                "name": "Limunada sa voćem (500ml)",
+                "desc": "(ukus po izboru: jagoda, malina, kupina, passion fruit)",
+                "price": "320 rsd."
+              }
+            ]
+          },
+          {
+            "title": "Ceđeni sokovi",
+            "items": [
+              {
+                "name": "Ceđena pomorandža (200ml/300ml/500ml)",
+                "desc": "",
+                "price": "320/380/440 rsd."
+              },
+              {
+                "name": "Ceđeni grejpfrut (200ml/300ml/500ml)",
+                "desc": "",
+                "price": "320/380/440 rsd."
+              },
+              {
+                "name": "Ceđena jabuka (300ml)",
+                "desc": "",
+                "price": "300 rsd."
+              },
+              {
+                "name": "Hladno ceđeni celer i jabuka (300ml)",
+                "desc": "",
+                "price": "350 rsd."
+              },
+              {
+                "name": "Glow Juice (300ml)",
+                "desc": "(pomorandža, limun, šargarepa, đumbir)",
+                "price": "450 rsd."
+              },
+              {
+                "name": "Healthy mix (300ml)",
+                "desc": "(pomorandža, jabuka, šargarepa)",
+                "price": "390 rsd."
+              },
+              {
+                "name": "Vitamin C mix (300ml)",
+                "desc": "(limun, pomorandža, grejp)",
+                "price": "420 rsd."
+              },
+              {
+                "name": "Citrus apple mix (300ml)",
+                "desc": "(pomorandža, jabuka, med)",
+                "price": "390 rsd."
+              },
+              {
+                "name": "Fresh mix (300ml)",
+                "desc": "(jabuka, limeta, menta)",
+                "price": "320 rsd."
+              }
+            ]
+          },
+          {
+            "title": "Prirodni sokovi",
+            "items": [
+              {
+                "name": "Sok od zove (500ml)",
+                "desc": "",
+                "price": "280 rsd."
+              },
+              {
+                "name": "Sok od lavande (500ml)",
+                "desc": "",
+                "price": "280 rsd."
+              },
+              {
+                "name": "Sok od nane (500ml)",
+                "desc": "",
+                "price": "280 rsd."
+              },
+              {
+                "name": "Sok od višnje (500ml)",
+                "desc": "",
+                "price": "280 rsd."
+              },
+              {
+                "name": "Domaći Ice Tea (500ml)",
+                "desc": "(breskva, passion fruit, mango, malina, jagoda)",
+                "price": "320 rsd."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Vode i sokovi",
+        "image": "/images/voda.avif",
+        "sections": [
+          {
+            "title": "Vode",
+            "items": [
+              {
+                "name": "Rosa (330ml/750ml)",
+                "desc": "",
+                "price": "220/370 rsd."
+              },
+              {
+                "name": "Rosa gazirana (330ml/750ml)",
+                "desc": "",
+                "price": "220/370 rsd."
+              },
+              {
+                "name": "Romerquelle limunska trava (330ml)",
+                "desc": "",
+                "price": "300 rsd."
+              },
+              { "name": "Vodavoda (330ml)", "desc": "", "price": "180 rsd." },
+              {
+                "name": "Vodavoda gazirana (250ml)",
+                "desc": "",
+                "price": "180 rsd."
+              }
+            ]
+          },
+          {
+            "title": "Negazirani sokovi",
+            "items": [
+              {
+                "name": "Next sok (200ml)",
+                "desc": "(pomorandža, jabuka, jagoda, šumsko voće, breskva)",
+                "price": "270 rsd."
+              },
+              {
+                "name": "Cedevita (200ml)",
+                "desc": "(pomorandža, limun, ananas-mango, limun, limunska trava i limeta)",
+                "price": "160 rsd."
+              },
+              {
+                "name": "Press a svež (200ml)",
+                "desc": "(bez dodatog šećera, boje, aditiva)",
+                "price": "270 rsd."
+              }
+            ]
+          },
+          {
+            "title": "Gazirani sokovi",
+            "items": [
+              { "name": "Coca-Cola (250ml)", "desc": "", "price": "280 rsd." },
+              {
+                "name": "Coca-Cola Zero (250ml)",
+                "desc": "",
+                "price": "280 rsd."
+              },
+              {
+                "name": "Coca-Cola Lime (250ml)",
+                "desc": "",
+                "price": "280 rsd."
+              },
+              {
+                "name": "Schweppes Bitter lemon (250ml)",
+                "desc": "",
+                "price": "290 rsd."
+              },
+              {
+                "name": "Schweppes Tonic (250ml)",
+                "desc": "",
+                "price": "290 rsd."
+              },
+              {
+                "name": "Schweppes Tangerine (250ml)",
+                "desc": "",
+                "price": "290 rsd."
+              },
+              {
+                "name": "Schweppes Grapefruit (250ml)",
+                "desc": "",
+                "price": "290 rsd."
+              },
+              {
+                "name": "Fanta Orange (250ml)",
+                "desc": "",
+                "price": "280 rsd."
+              },
+              { "name": "Sprite (250ml)", "desc": "", "price": "280 rsd." },
+              { "name": "Cockta (250ml)", "desc": "", "price": "280 rsd." },
+              {
+                "name": "Cockta Free (250ml)",
+                "desc": "",
+                "price": "280 rsd."
+              },
+              {
+                "name": "San Pellegrino (250ml)",
+                "desc": "(pomoroandža, crvena pomoroandža)",
+                "price": "280 rsd."
+              }
+            ]
+          },
+          {
+            "title": "Energetski napici",
+            "items": [
+              { "name": "Red Bull (250ml)", "desc": "", "price": "390 rsd." },
+              {
+                "name": "Red Bull Sugar Free (250ml)",
+                "desc": "",
+                "price": "390 rsd."
+              },
+              {
+                "name": "Red Bull Red Edition (lubenica) (250ml)",
+                "desc": "",
+                "price": "390 rsd."
+              },
+              { "name": "Ultra (250ml)", "desc": "", "price": "290 rsd." }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Smuti i šejkovi",
+        "image": "/images/sejk.avif",
+        "sections": [
+          {
+            "title": "Smuti",
+            "items": [
+              {
+                "name": "Platz smuti (300ml)",
+                "desc": "(celer, jabuka, limeta, spanać, banana)",
+                "price": "480 rsd."
+              },
+              {
+                "name": "Banana-malina smuti (300ml)",
+                "desc": "(banana, malina, mleko, med)",
+                "price": "460 rsd."
+              },
+              {
+                "name": "Banana-kikiriki smuti (300ml)",
+                "desc": "(banana, kikiriki puter, mleko)",
+                "price": "460 rsd."
+              },
+              {
+                "name": "Red fruit smuti (300ml)",
+                "desc": "(miks šumskog voća, maline, banana, jabuka)",
+                "price": "440 rsd."
+              }
+            ]
+          },
+          {
+            "title": "Šejkovi",
+            "items": [
+              {
+                "name": "Plazma šejk (300ml)",
+                "desc": "",
+                "price": "400 rsd."
+              },
+              {
+                "name": "Banana-plazma šejk (300ml)",
+                "desc": "",
+                "price": "380 rsd."
+              },
+              { "name": "Lotus šejk (300ml)", "desc": "", "price": "350 rsd." },
+              { "name": "Oreo šejk (300ml)", "desc": "", "price": "350 rsd." },
+              {
+                "name": "Coffee šejk (300ml)",
+                "desc": "",
+                "price": "400 rsd."
+              },
+              {
+                "name": "Domaći Milkshake (300ml)",
+                "desc": "(voćni pire po izboru: jagoda, malina, višnja)",
+                "price": "360 rsd."
+              },
+              {
+                "name": "Protein šejk (300ml)",
+                "desc": "banana, mleko, whey protein (vanila, čokolada, jagoda)",
+                "price": "400 rsd."
+              },
+              {
+                "name": "Milkshake (300ml)",
+                "desc": "(vanila, čokolada)",
+                "price": "230 rsd."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Alkoholna pića",
+    "slug": "alkoholna-pica",
+    "subcategories": [
+      {
+        "name": "Pivo",
+        "image": "/images/pivo.avif",
+        "sections": [
+          {
+            "title": "Flaširana piva",
+            "items": [
+              { "name": "Blanc 1664 (330ml)", "desc": "", "price": "320 rsd." },
+              {
+                "name": "Blanc Rose 1664 (malina) (330ml)",
+                "desc": "",
+                "price": "320 rsd."
+              },
+              { "name": "Carlsberg (250ml)", "desc": "", "price": "330 rsd." },
+              { "name": "Budweiser (330ml)", "desc": "", "price": "300 rsd." },
+              {
+                "name": "Budweiser Dark (330ml)",
+                "desc": "",
+                "price": "300 rsd."
+              },
+              { "name": "Lav Premium(330ml)", "desc": "", "price": "270 rsd." },
+              { "name": "San Miguel (330ml)", "desc": "", "price": "450 rsd." },
+              { "name": "Tuborg (330ml)", "desc": "", "price": "300 rsd." },
+              {
+                "name": "Tuborg 0,00% (330ml)",
+                "desc": "",
+                "price": "270 rsd."
+              }
+            ]
+          },
+          {
+            "title": "Točena piva",
+            "items": [
+              {
+                "name": "Tuborg (330ml/500ml)",
+                "desc": "",
+                "price": "320/380 rsd."
+              },
+              {
+                "name": "Kronenbourg Blanc (330ml/500ml)",
+                "desc": "",
+                "price": "320/380 rsd."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Vina",
+        "image": "/images/petra.avif",
+        "sections": [
+          {
+            "title": "Vinarija Reljić",
+            "items": [
+              {
+                "name": "Rebus Tamjanika (125ml/750ml)",
+                "desc": "",
+                "price": "500/2.800 rsd."
+              },
+              {
+                "name": "Sauvignon Blanc (125ml/750ml)",
+                "desc": "",
+                "price": "490/2.700 rsd."
+              },
+              {
+                "name": "Rebus Chardonnay (125ml/750ml)",
+                "desc": "",
+                "price": "520/3.000 rsd."
+              },
+              {
+                "name": "Rebus Merlot (125ml/750ml)",
+                "desc": "",
+                "price": "490/2.700 rsd."
+              },
+              {
+                "name": "Rebus Crveni (125ml/750ml)",
+                "desc": "",
+                "price": "520/3.000 rsd."
+              }
+            ]
+          },
+          {
+            "title": "Vinarija Petra",
+            "items": [
+              {
+                "name": "Petra Traminac (125ml/750ml)",
+                "desc": "",
+                "price": "520/3.000 rsd."
+              },
+              {
+                "name": "Petra Rose (125ml/750ml)",
+                "desc": "",
+                "price": "520/3.000 rsd."
+              },
+              {
+                "name": "Petra Cuvée (125ml/750ml)",
+                "desc": "",
+                "price": "900/5.000 rsd."
+              }
+            ]
+          },
+          {
+            "title": "Vinarija Kovačević",
+            "items": [
+              {
+                "name": "Vino Kovačević Chardonnay (125ml/750ml)",
+                "desc": "",
+                "price": "550/3.100 rsd."
+              },
+              {
+                "name": "Vino Kovačević Aurelius (125ml/750ml)",
+                "desc": "",
+                "price": "550/3.100 rsd."
+              }
+            ]
+          },
+          {
+            "title": "Vinarija Zvonko Bogdan",
+            "items": [
+              {
+                "name": "Zvonko Bogdan 8 Tamburaša (125ml/750ml)",
+                "desc": "",
+                "price": "500/2.800 rsd."
+              },
+              {
+                "name": "Zvonko Bogdan Život teče (125ml/750ml)",
+                "desc": "",
+                "price": "500/2.800 rsd."
+              },
+              {
+                "name": "Zvonko Bogdan Cuvée No.1 (125ml/750ml)",
+                "desc": "",
+                "price": "900/5.000 rsd."
+              }
+            ]
+          },
+          {
+            "title": "Vinarija Kozlović",
+            "items": [
+              {
+                "name": "Istarska Malvazija Kozlović (125ml/750ml)",
+                "desc": "",
+                "price": "900/5.000 rsd."
+              }
+            ]
+          },
+          {
+            "title": "Vinarija Tonković",
+            "items": [
+              {
+                "name": "Kadarka Vinarija Tonković (125ml/750ml)",
+                "desc": "",
+                "price": "500/2.800 rsd."
+              }
+            ]
+          },
+          {
+            "title": "Penušavo vino",
+            "items": [
+              {
+                "name": "Prosecco Villa Sandi (125ml/750ml)",
+                "desc": "",
+                "price": "390/2.000 rsd."
+              },
+              { "name": "Špricer (300ml)", "desc": "", "price": "220 rsd." }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Žestoka pića",
+        "sections": [
+          {
+            "title": "Gin",
+            "items": [
+              {
+                "name": "Beefeater Gin (30ml/700ml)",
+                "desc": "",
+                "price": "250/4.900 rsd."
+              },
+              { "name": "Bulldog Gin (30ml)", "desc": "", "price": "400 rsd." },
+              {
+                "name": "Bombay Sapphire Gin (30ml)",
+                "desc": "",
+                "price": "300 rsd."
+              }
+            ]
+          },
+          {
+            "title": "Brendi",
+            "items": [
+              {
+                "name": "Rubinov Vinjak (50ml)",
+                "desc": "",
+                "price": "300 rsd."
+              }
+            ]
+          },
+          {
+            "title": "Viski",
+            "items": [
+              {
+                "name": "Jack Daniel’s (30ml)",
+                "desc": "",
+                "price": "450 rsd."
+              },
+              {
+                "name": "Jack Daniel’s Single Barrel (30ml)",
+                "desc": "",
+                "price": "750 rsd."
+              },
+              {
+                "name": "Johnnie Walker Red Label (30ml)",
+                "desc": "",
+                "price": "330 rsd."
+              },
+              {
+                "name": "Johnnie Walker Black Label (30ml)",
+                "desc": "",
+                "price": "550 rsd."
+              },
+              {
+                "name": "Jameson Irish Whiskey (30ml/700ml)",
+                "desc": "",
+                "price": "350/7.000 rsd."
+              },
+              {
+                "name": "Chivas Regal (30ml/700ml)",
+                "desc": "",
+                "price": "500/10.000 rsd."
+              }
+            ]
+          },
+          {
+            "title": "Vodka",
+            "items": [
+              {
+                "name": "Finlandia vodka (30ml/700ml)",
+                "desc": "",
+                "price": "300/6.000 rsd."
+              },
+              {
+                "name": "Grey Goose (30ml/700ml)",
+                "desc": "",
+                "price": "600/12.000 rsd."
+              }
+            ]
+          },
+          {
+            "title": "Rum",
+            "items": [
+              { "name": "Bacardi rum (30ml)", "desc": "", "price": "310 rsd." },
+              {
+                "name": "Don Papa Baroko Rum (30ml)",
+                "desc": "",
+                "price": "790 rsd."
+              }
+            ]
+          },
+          {
+            "title": "Vermut/Aperitiv",
+            "items": [
+              {
+                "name": "Martini Bianco (50ml)",
+                "desc": "",
+                "price": "300 rsd."
+              },
+              {
+                "name": "Martini Rosso (50ml)",
+                "desc": "",
+                "price": "300 rsd."
+              },
+              { "name": "Campari (30ml)", "desc": "", "price": "310 rsd." }
+            ]
+          },
+          {
+            "title": "Tequila",
+            "items": [
+              {
+                "name": "Tequila Camino Blanco (30ml)",
+                "desc": "",
+                "price": "330 rsd."
+              }
+            ]
+          },
+          {
+            "title": "Rakije",
+            "items": [
+              {
+                "name": "Stara Sokolova šljiva (30ml)",
+                "desc": "",
+                "price": "400 rsd."
+              },
+              {
+                "name": "Stara Sokolova viljamovka (30ml)",
+                "desc": "",
+                "price": "400 rsd."
+              },
+              {
+                "name": "Stara Sokolova dunja (30ml)",
+                "desc": "",
+                "price": "380 rsd."
+              },
+              {
+                "name": "Stara Sokolova kajsija (30ml)",
+                "desc": "",
+                "price": "360 rsd."
+              },
+              {
+                "name": "Stara Sokolova Medovača (30ml)",
+                "desc": "",
+                "price": "340 rsd."
+              },
+              {
+                "name": "Zlatna rakija Viljamovka (30ml)",
+                "desc": "",
+                "price": "400 rsd."
+              },
+              {
+                "name": "Zlatna rakija Kajsija(30ml)",
+                "desc": "",
+                "price": "400 rsd."
+              },
+              {
+                "name": "Takovo Viljamovka (30ml)",
+                "desc": "",
+                "price": "300 rsd."
+              },
+              { "name": "Meduška (30ml)", "desc": "", "price": "300 rsd." }
+            ]
+          },
+          {
+            "title": "Likeri",
+            "items": [
+              {
+                "name": "Jagermeister (30ml)",
+                "desc": "",
+                "price": "300 rsd."
+              },
+              {
+                "name": "Antique Pelinkovac (30ml)",
+                "desc": "",
+                "price": "290 rsd."
+              },
+              {
+                "name": "Gorki list (50ml/100ml/700ml)",
+                "desc": "",
+                "price": "270/500/5.000 rsd.",
+                "image": "/images/bitter-gorki-list.avif",
+                "longDesc": "Jedinstven, autentičan i prepoznatljiv. Gorki List je najpoznatiji biljni liker na ovim prostorima, napravljen od 27 vrsta lekovitog bilja."
+              },
+              {
+                "name": "Liqueur Quince & Honey (30ml)",
+                "desc": "",
+                "price": "300 rsd.",
+                "image": "/images/quince-honey.avif",
+                "longDesc": "Liker Quince Honey predstavlja jedinstvenu kombinaciju pažljivo odabrane dunje i prirodnog meda, spojenu u bogat i aromatičan napitak koji odiše toplinom i tradicijom."
+              },
+              { "name": "Bailey’s (30ml)", "desc": "", "price": "380 rsd." },
+              {
+                "name": "Bajadera liker (30ml)",
+                "desc": "",
+                "price": "350 rsd."
+              }
+            ]
+          },
+          {
+            "title": "Konjak",
+            "items": [
+              {
+                "name": "Courvoisier V.S. (30ml)",
+                "desc": "",
+                "price": "500 rsd."
+              },
+              { "name": "Martel V.S. (30ml)", "desc": "", "price": "500 rsd." }
+            ]
+          },
+          {
+            "title": "Cideri",
+            "items": [
+              {
+                "name": "Somersby (330ml)",
+                "desc": "(jabuka, kruška, breskva, borovnica, mango, malina (0,00%))",
+                "price": "350 rsd."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Topla alkoholna pića",
+        "image": "/images/gorki.avif",
+        "items": [
+          {
+            "name": "Kuvano vino (200ml) (crveno, belo)",
+            "desc": "",
+            "price": "260 rsd."
+          },
+          {
+            "name": "Kuvani Gorki list (150ml)",
+            "desc": "",
+            "price": "450 rsd."
+          },
+          { "name": "Kuvani džin (250ml)", "desc": "", "price": "450 rsd." },
+          {
+            "name": "Šumadijski čaj (80ml) (Kuvana rakija)",
+            "desc": "",
+            "price": "350 rsd."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Kokteli",
+    "slug": "kokteli",
+    "subcategories": [
+      {
+        "name": "Kokteli",
+        "items": [
+          {
+            "name": "Gin Tonic (330ml)",
+            "desc": "(Beefeatear Gin, tonic) Aromatičan Gin Tonic sa izraženim botaničkim notama.",
+            "price": "450 rsd."
+          },
+          {
+            "name": "Fruit Fusion Gin Tonic (330ml)",
+            "desc": "(Beefeater Gin, tonic, ukus po izboru: jagoda, malina, kupina, passion fruit, zova) Osvežavajuća varijanta klasika sa dodatkom voćnih nota po vašem izboru.",
+            "price": "550 rsd."
+          },
+          {
+            "name": "Bombay Sapphire Gin Tonic (330ml)",
+            "desc": "(Bombay Sapphire Gin, tonic) Aromatičan Gin Tonic sa izraženim botaničkim notama.",
+            "price": "500 rsd."
+          },
+          {
+            "name": "Clover Club (200ml) (petak, subota)",
+            "desc": "(Gin, sirup od maline, sok od limuna, belance) Američki klasik, kremast, blago kiseo i pun ukusa maline.",
+            "price": "550 rsd."
+          },
+          {
+            "name": "Bramble (200ml)",
+            "desc": "(Gin, liker od kupine, sok od limuna, šećerni sirup) Britanski voćni klasik — osvežavajući, blago kiseo i pun ukusa kupine.",
+            "price": "550 rsd."
+          },
+          {
+            "name": "Strawberry Gin Tonic (330ml)",
+            "desc": "(Gin, tonic, jagode) Lagano sladak i voćan Gin Tonic, sa prepoznatljivim notama jagode.",
+            "price": "500 rsd."
+          },
+          {
+            "name": "Martini Dry (70ml)",
+            "desc": "(Gin, dry Martini) Klasik čiste elegancije, idealan za ljubitelje suvog i minimalističkog ukusa.",
+            "price": "600 rsd."
+          },
+          {
+            "name": "Vodka Martini (70ml)",
+            "desc": "(Vodka, dry Martini) Kristalno čist i dominantan ukus za one koji vole oštar karakter votke.",
+            "price": "600 rsd."
+          },
+          {
+            "name": "Espresso Martini (200ml)",
+            "desc": "(Vodka, sirup od kafe, espresso, šećerni sirup) Kremasta i intenzivna kombinacija kafe i votke, savršena za after-dinner.",
+            "price": "650 rsd."
+          },
+          {
+            "name": "Martini Fiero & Tonic (140ml)",
+            "desc": "(Martini Fiero, Tonic water) Osvežavajući, lagano gorkasto-sladak koktel živih citrusnih aroma.",
+            "price": "400 rsd."
+          },
+          {
+            "name": "Martini Roso & Tonic (140ml)",
+            "desc": "(Martini Fiero, Schwepps Grapefruit) Intenzivan i osvežavajući spoj bogatih biljnih nota crvenog vermuta i penušavog, gorko-slatkog grejpfruta.",
+            "price": "450 rsd."
+          },
+          {
+            "name": "Martini Bianco Spritz (150ml)",
+            "desc": "(Martini Bianco, prosecco, soda) Prefinjen i penušav spoj cvetnih nota vermuta i vrhunskog proseka.",
+            "price": "550 rsd."
+          },
+          {
+            "name": "Hugo (250ml)",
+            "desc": "(Prosecco, sirup od zove, soda, nana) Lagano cvetno i izuzetno osvežavajuće prosecco piće.",
+            "price": "570 rsd."
+          },
+          {
+            "name": "Aperol spritz (150ml)",
+            "desc": "(Aperol, Prosecco, soda) Najpoznatiji italijanski spritz, gorkasto-sladak i idealan za osveženje.",
+            "price": "550 rsd."
+          },
+          {
+            "name": "Mimoza (200ml)",
+            "desc": "(Prosecco, ceđena pomorandža) Peneća, citrusna klasika savršena za jutarnje i brunch trenutke.",
+            "price": "450 rsd."
+          },
+          {
+            "name": "Margarita (85ml)",
+            "desc": "(Tequila, Triple Sec, limeta, šećerni sirup) Meksički klasik pun živosti. Balans kiselkastog i slatkog ukusa limete i tequile.",
+            "price": "550 rsd."
+          },
+          {
+            "name": "Skinny bitch (150ml)",
+            "desc": "(Vodka, limunov sok, soda) Vrlo lagan i osvežavajući izbor za ljubitelje čistog, citrusnog profila.",
+            "price": "400 rsd."
+          },
+          {
+            "name": "Moscow Mule (250ml)",
+            "desc": "(Vodka, limun, đumbir) Svež koktel sa pikantnom notom đumbira, idealan za one koji vole blagu začinjenost.",
+            "price": "450 rsd."
+          },
+          {
+            "name": "Negroni (90ml)",
+            "desc": "(Gin, Campari, Martini Rosso) Italijanski aperitiv snažnog karaktera — gorkasto-aromatičan i kompleksan.",
+            "price": "650 rsd."
+          },
+          {
+            "name": "Mojito (330ml)",
+            "desc": "(Bacardi rum, limeta, nana, smeđi šećer, soda) Sveža kombinacija limete, mente i ruma koja savršeno rashlađuje.",
+            "price": "500 rsd."
+          },
+          {
+            "name": "Strawberry Mojito (330ml)",
+            "desc": "(Bacardi rum, limeta, nana, sirup od jagode, jagode, soda) Voćni i slatki twist klasičnog mojita, sa punim ukusom jagode.",
+            "price": "500 rsd."
+          },
+          {
+            "name": "Raspberry Mojito (330ml)",
+            "desc": "(Bacardi rum, limeta, nana, sirup od maline, maline, soda) Lagano kiseo i aromatičan mojito sa punim ukusom maline.",
+            "price": "500 rsd."
+          },
+          {
+            "name": "Mai Tai (250ml)",
+            "desc": "(Amaretto, rum, Triple sec, limun) Egzotičan tiki favorit, spoj badema, citrusa i tropskih nota.",
+            "price": "700 rsd."
+          },
+          {
+            "name": "Apple Pie (250ml)",
+            "desc": "(Jameson, zelena jabuka, limun, cimet) Sladak, topao i aromatičan koktel koji podseća na pitu od jabuka.",
+            "price": "600 rsd."
+          },
+          {
+            "name": "Bitter Gold (150ml)",
+            "desc": "(Jack Daniel’s, grejpfrut) Gorkasto-osvežavajući koktel sa dominantnim ukusom grejpfruta.",
+            "price": "600 rsd."
+          },
+          {
+            "name": "Devil’s Ice Tea (330ml)",
+            "desc": "(Vodka, Gin, Rum, Tequila, Apsint, Triple Sec, limun, liker od brusnice, Sprite) Snažan i aromatičan koktel bogatog sastava, idealan za ljubitelje jakih, a pitkih ukusa.",
+            "price": "800 rsd."
+          },
+          {
+            "name": "Platz shot (50ml)",
+            "desc": "(Baileys, Amaretto, Kahlua, šlag) Kremasta eksplozija ukusa kafe, badema i irskog krema.",
+            "price": "400 rsd."
+          }
+        ]
+      },
+      {
+        "name": "Bezalkoholni kokteli",
+        "items": [
+          {
+            "name": "Virgin Mojito (330ml)",
+            "desc": "(sok od limete, smeđi šećer, nana, soda) Bezalkoholna, osvežavajuća varijanta mojita sa čistim mentol-limeta karakterom.",
+            "price": "400 rsd."
+          },
+          {
+            "name": "Jagodica Bobica (280ml)",
+            "desc": "(Pire od jagode, sok od jabuke, soda) Bezalkoholna kombinacija pirea od jagode i soka od jabuke, dopunjena sodom za maksimalno osveženje.",
+            "price": "250 rsd."
+          },
+          {
+            "name": "Betmen (280ml)",
+            "desc": "(Sirup od kupine, sok od jabuke, limunov sok, soda) Bezalkoholna kombinacija kupine i jabuke izbalansirana sa svežim sokom od limuna i sa sodom.",
+            "price": "250 rsd."
+          }
+        ]
+      }
+    ]
+  }
+]

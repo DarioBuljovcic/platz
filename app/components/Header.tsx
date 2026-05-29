@@ -30,9 +30,10 @@ const Header = () => {
     }, [isMenuOpen])
 
     const navLinks = [
-        { name: 'Naša priča', href: '/#story' },
-        { name: 'Meni', href: '/#menu' },
-        { name: 'Kontakt', href: '/#contact' },
+        { name: 'Početna', href: '/' },
+        { name: 'Naša priča', href: '/o-nama' },
+        { name: 'Meni', href: '/menu' },
+        { name: 'Kontakt', href: '/kontakt' },
     ]
 
     return (

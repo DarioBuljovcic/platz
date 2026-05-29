@@ -78,21 +78,24 @@ export default function AboutUsPage() {
                     </FadeIn>
 
                     <FadeIn delay={200}>
-                        <div className="grid md:grid-cols-2 gap-12 items-center">
-                            <div className="order-2 md:order-1 relative aspect-square rounded-[2rem] overflow-hidden shadow-2xl border border-white/10">
+                        <div className="grid md:grid-cols-1 gap-12 items-center">
+                            <div className="order-2 md:order-1 relative aspect-[2] rounded-[2rem] overflow-hidden shadow-2xl border border-white/10">
                                 <Image
-                                    src="https://images.unsplash.com/photo-1453614512568-c4024d13c247?q=80&w=800&auto=format&fit=crop"
+                                    src="/images/building.avif"
                                     alt="Pogled na Suboticu"
                                     fill
                                     className="object-cover"
                                 />
                             </div>
-                            <div className="order-1 md:order-2 space-y-6 text-lg md:text-xl text-white/80 font-light leading-relaxed">
+                            <div className="order-2 space-y-6 text-lg md:text-xl text-white/80 font-light leading-relaxed">
                                 <p>
-                                    Dok uživate u našoj kafi, pogled vam prirodno beži ka Plavoj fontani i Gradskoj kući - mestima koja su decenijama svedoci gradskih priča.
+                                    Na Trgu Republike 10 stoji jedna od najstarijih spratnica u Subotici još krajem 18. veka na ovom mestu postojao je spratni objekat, što je bila prava redkost u gradu punom prizemnih kuća.
                                 </p>
                                 <p>
-                                    Verujemo da ambijent u kojem pijete kafu podjednako utiče na uživanje kao i sam kvalitet zrna. Zato smo odabrali lokaciju koja čuva dušu Subotice, kako biste se svakim gutljajem osećali delom ove velike istorije.
+                                    Oko 1800. godine podigao ga je Jakov Lančarević pripadnik ugledne porodice koja je 1779. godine stekla status građana tek oslobođene Subotice. Tokom narednih vekova kuća je prelazila u ruke značajnih porodica, sve do trgovca Dušana Stojkovića, koji joj je 1907. godine dao današnji secesijski izgled sa tornjom, erkerom i elegantim balkonom od kovanog gvožđa.
+                                </p>
+                                <p>
+                                    U prizemlju su se smenjivali dućani i kafane, među njima i čuveni "Biser" sa jednom od najlepših bašti u centru grada. Danas kao zaštićeno kulturno dobro, ova zgrada čuva više od dva veka subotičke istorije i pruža dom Cafe Platzu.
                                 </p>
                             </div>
                         </div>

@@ -1,4 +1,4 @@
-import menuDataJson from "../data/menu_v2.json";
+import menuDataJson from "../data/menu_v3.json";
 
 export type MenuItem = {
   name: string;
@@ -64,10 +64,12 @@ export function resolveMenuCategory(catParam: SearchParamsValue) {
   const normalizedLegacyParam = normalizeLegacyCategory(rawParam);
 
   const matchedCategory =
-    menuData.find((category) => normalizeParam(category.slug) === normalizedParam) ||
+    menuData.find(
+      (category) => normalizeParam(category.slug) === normalizedParam,
+    ) ||
     menuData.find(
       (category) =>
-        normalizeLegacyCategory(category.category) === normalizedLegacyParam
+        normalizeLegacyCategory(category.category) === normalizedLegacyParam,
     ) ||
     fallbackCategory;
 
