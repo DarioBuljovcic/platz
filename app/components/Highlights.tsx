@@ -7,17 +7,17 @@ const Highlights = () => {
         {
             icon: Dog,
             title: "Pet Friendly",
-            desc: "Tvoj četvoronožni prijatelj je uvek dobrodošao kod nas."
+
         },
         {
             icon: Music,
             title: "Živa Muzika",
-            desc: "Uživaj u akustičnim svirkama i sjajnoj atmosferi vikendom."
+
         },
         {
             icon: Sun,
             title: "Letnja Terasa",
-            desc: "Savršeno mesto za prvu kafu ili večernji koktel na otvorenom."
+
         }
     ]
 
@@ -33,9 +33,6 @@ const Highlights = () => {
                                 </div>
                                 <div className="space-y-3">
                                     <h3 className="font-display text-2xl text-white tracking-wide">{item.title}</h3>
-                                    <p className="text-white/60 font-light leading-relaxed max-w-[250px] mx-auto text-sm">
-                                        {item.desc}
-                                    </p>
                                 </div>
                             </div>
                         </FadeIn>
