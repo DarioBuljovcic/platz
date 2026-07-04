@@ -1,15 +1,39 @@
+import type { Metadata } from "next";
 import React from 'react'
 import Menu from '../components/Menu'
 import { FadeIn } from '../components/FadeIn'
 import { ChevronLeft } from 'lucide-react'
 import ScrollToTop from '../components/ScrollToTop'
 import { resolveMenuCategory } from '../lib/menu'
+import { createPageMetadata } from '../lib/seo'
 import Link from 'next/link'
 
 type FullMenuPageProps = {
     searchParams?: Promise<{
         cat?: string | string[]
     }>
+}
+
+export async function generateMetadata({
+  searchParams,
+}: FullMenuPageProps): Promise<Metadata> {
+  const resolvedSearchParams = await searchParams;
+  const { activeData } = resolveMenuCategory(resolvedSearchParams?.cat);
+
+  if (activeData) {
+    return createPageMetadata({
+      title: activeData.category,
+      description: `Pogledajte ${activeData.category.toLowerCase()} u meniju Platz Caffea u Subotici — cene, opisi i ponuda.`,
+      path: `/menu?cat=${activeData.slug}`,
+    });
+  }
+
+  return createPageMetadata({
+    title: "Meni",
+    description:
+      "Kompletan meni Platz Caffea u Subotici — kafa, topli napici, kokteli, alkoholna i bezalkoholna pića.",
+    path: "/menu",
+  });
 }
 
 export default async function FullMenuPage({ searchParams }: FullMenuPageProps) {

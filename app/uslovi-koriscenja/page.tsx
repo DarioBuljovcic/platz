@@ -1,4 +1,14 @@
+import type { Metadata } from "next";
 import { FadeIn } from "../components/FadeIn";
+import { createPageMetadata } from "../lib/seo";
+
+export const metadata: Metadata = createPageMetadata({
+  title: "Uslovi korišćenja",
+  description:
+    "Uslovi korišćenja veb-sajta Platz Caffea — pravila pristupa, intelektualna svojina i odgovornost.",
+  path: "/uslovi-koriscenja",
+  noIndex: true,
+});
 
 export default function TermsOfService() {
   return (

@@ -8,6 +8,7 @@ const partners = [
   { name: "VodaVoda", logo: "/logos/vodavoda.avif" },
   { name: "LavAzza", logo: "/logos/lavazza.avif" },
   { name: "BeoStock", logo: "/logos/beostok.avif" },
+  { name: "CocaCola", logo: "/logos/cola.avif" },
 ];
 
 const PartnersLine = () => {

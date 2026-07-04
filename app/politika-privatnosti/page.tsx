@@ -1,4 +1,14 @@
+import type { Metadata } from "next";
 import { FadeIn } from "../components/FadeIn";
+import { createPageMetadata, siteConfig } from "../lib/seo";
+
+export const metadata: Metadata = createPageMetadata({
+  title: "Politika privatnosti",
+  description:
+    "Politika privatnosti Platz Caffea — kako štitimo vaše podatke prilikom korišćenja našeg veb-sajta.",
+  path: "/politika-privatnosti",
+  noIndex: true,
+});
 
 export default function PrivacyPolicy() {
   return (
@@ -34,7 +44,7 @@ export default function PrivacyPolicy() {
             <section>
               <h2 className="text-2xl font-bold mb-4 uppercase tracking-wider">4. Kontakt</h2>
               <p>
-                Ako imate bilo kakvih pitanja u vezi sa našom politikom privatnosti, slobodno nas kontaktirajte putem emaila: info@platzcafe.com.
+                Ako imate bilo kakvih pitanja u vezi sa našom politikom privatnosti, slobodno nas kontaktirajte putem emaila: {siteConfig.email}.
               </p>
             </section>
           </div>

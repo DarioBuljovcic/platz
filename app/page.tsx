@@ -3,7 +3,6 @@ import Story from "./components/Story";
 import Highlights from "./components/Highlights";
 import Separator from "./components/Separator";
 import MainMenuSection from "./components/MainMenu";
-import RotatingReviews from "./components/RotatingReviews";
 import PartnersLine from "./components/PartnersLine";
 
 export default function HomePage() {
@@ -22,9 +21,9 @@ export default function HomePage() {
       <Highlights />
       <Separator />
 
-      {/* SECTION 4: REVIEWS */}
+      {/* SECTION 4: REVIEWS
       <RotatingReviews />
-      <Separator />
+      <Separator /> */}
 
       {/* SECTION 5: PARTNERS */}
       <PartnersLine />
