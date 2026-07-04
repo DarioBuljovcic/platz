@@ -190,6 +190,9 @@ export const defaultMetadata: Metadata = {
     icon: "/favicon.ico",
     apple: "/Logo.webp",
   },
+  verification: {
+    google: "PGIpIVu_tbK23oHPiDj7mz5SlCMtvP4P3ThsgHvw0wE",
+  },
   other: {
     "geo.region": "RS-VO",
     "geo.placename": "Subotica",
