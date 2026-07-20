@@ -25,8 +25,7 @@ const Story = () => {
                 <div className="lg:col-span-6 space-y-16">
                     <FadeIn>
                         <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-white leading-[1.05] tracking-tight">
-                            Uspori, <br />
-                            <span className="italic font-light text-brown">druži se</span> i uživaj.
+                            Vaš kutak za dobru kafu
                         </h1>
                     </FadeIn>
 
@@ -54,7 +53,7 @@ const Story = () => {
                     <FadeIn delay={300}>
                         <div className="aspect-square rounded-[2rem] overflow-hidden shadow-2xl relative">
                             <Image
-                                src="/images/TBP-1006.avif"
+                                src="/images/inner.avif"
                                 alt="Opuštena atmosfera kafića"
                                 className="object-cover object-[50%_20%]"
                                 fill
@@ -66,7 +65,7 @@ const Story = () => {
                     <FadeIn delay={400} className="hidden md:block absolute md:-bottom-16 -right-16 w-2/3">
                         <div className="aspect-square rounded-[2rem] overflow-hidden shadow-2xl border-8 border-green-accent relative">
                             <Image
-                                src="/images/TBP-1031.avif"
+                                src="/images/closeup.avif"
                                 alt="Kvalitetna kafa"
                                 className="object-cover"
                                 fill
@@ -81,7 +80,7 @@ const Story = () => {
                     <FadeIn>
                         <div className="aspect-[16/9] md:aspect-[21/9] xl:aspect-[16/10] rounded-[2rem] overflow-hidden shadow-2xl">
                             <Image
-                                src="/images/TBP-1027.jpg"
+                                src="/images/people.avif"
                                 alt="Subotica arhitektura"
                                 className="w-full h-full object-cover"
                                 width={1200}
